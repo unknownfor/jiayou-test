@@ -4322,6 +4322,9 @@ a:active {
   -webkit-background-size: 24px, 18px;
   background-size: 24px, 18px;
 }
+.carinfo-wrapper .info-item.load-box {
+  color: #a8a8a8;
+}
 .carinfo-wrapper .info-item.load-box .load-more {
   margin: 0 auto;
 }
