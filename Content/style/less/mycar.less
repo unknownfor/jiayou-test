@@ -20,9 +20,12 @@
     .car-add {
       @w: 45px;
       margin: 10px auto;
-      > img {
-        .size(@w,@w);
-        border-radius: @w;
+      .car-add-box {
+        display: inline-block;
+        > img {
+          .size(@w,@w);
+          border-radius: @w;
+        }
       }
     }
     .car-txt {
