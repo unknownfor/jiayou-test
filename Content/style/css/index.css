@@ -4285,16 +4285,26 @@ a:active {
   box-sizing: border-box;
   text-decoration: none;
 }
-.carinfo-wrapper .info-item .title-box {
-  margin-right: 10px;
+.carinfo-wrapper .info-item .title-input {
+  margin-right: 5px;
 }
-.carinfo-wrapper .info-item .cat-input {
-  border: none;
-  height: 94%;
+.carinfo-wrapper .info-item .title-box {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
+}
+.carinfo-wrapper .info-item .car-input {
+  border: none;
+  height: 75%;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+.carinfo-wrapper .info-item .car-input.right {
+  text-align: right;
+  padding-right: 5px;
 }
 .carinfo-wrapper .info-item .add-box {
   display: -webkit-box;
@@ -4327,6 +4337,25 @@ a:active {
 }
 .carinfo-wrapper .info-item.load-box .load-more {
   margin: 0 auto;
+  line-height: 45px;
+}
+.carinfo-wrapper .info-item.load-box .icon-right {
+  display: inline-block;
+  vertical-align: -2px;
+  font-size: 24px;
+  color: #8a8a8a;
+}
+.carinfo-wrapper .info-item.load-box .icon-right.down {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.carinfo-wrapper .info-item.margin {
+  margin: 10px 0;
+}
+.carinfo-wrapper .title {
+  height: 25px;
+  margin: 20px 0 0 15px;
 }
 .carinfo-wrapper .border {
   border-bottom: 1px solid #dfdfdf;

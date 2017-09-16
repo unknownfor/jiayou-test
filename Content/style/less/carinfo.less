@@ -34,13 +34,20 @@
     padding: 0 15px;
     box-sizing: border-box;
     text-decoration: none;
-    .title-box {
-      margin-right: 10px;
+    .title-input {
+      margin-right: 5px;
     }
-    .cat-input {
-      border: none;
-      height: 94%;
+    .title-box {
       flex: 1;
+    }
+    .car-input {
+      border: none;
+      height: 75%;
+      flex: 1;
+      &.right {
+        text-align: right;
+        padding-right: 5px;
+      }
     }
     .add-box {
       display: flex;
@@ -60,11 +67,26 @@
       color: #a8a8a8;
       .load-more {
         margin: 0 auto;
+        line-height: 45px;
       }
-      .icon-down {
+      .icon-right {
+        display: inline-block;
+        vertical-align: -2px;
+        font-size: 24px;
+        color: #8a8a8a;
+        &.down {
+          transform:rotate(90deg)
+        }
 
       }
     }
+    &.margin {
+      margin: 10px 0;
+    }
+  }
+  .title {
+    height: 25px;
+    margin: 20px 0 0 15px;
   }
   .border {
     border-bottom: 1px solid #dfdfdf;
