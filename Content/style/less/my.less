@@ -1,0 +1,201 @@
+.my-wrapper{
+  @left-distance:15px;
+  .basic-info-box{
+    .size(100%,160px);
+    position: relative;
+    margin-bottom: 95px;
+    .wx-info-box{
+      .size(100%,100%);
+      background-color:lighten(@dark-color,30%);
+      .filter-img{
+        .size(100%,100%);
+        filter: blur(10px);
+        opacity: 0.8;
+      }
+      .wx-info-main{
+        position: absolute;
+        z-index: 10000;
+        right:0;
+        left:0;
+        top:0;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .name-avatar-box{
+          @h:60px;
+          .size(100%,@h);
+          padding: 0 @left-distance;
+          box-sizing: border-box;
+          .f();
+          align-items: center;
+          .avatar{
+            .size(@h,@h);
+            .r(@h);
+          }
+          .wx-info-content{
+            margin:0 15px;
+            flex: 1;
+            >div{
+              color: #fff;
+              font-size: 12px;
+              &.nick-name{
+                font-size: 15px;
+                margin-bottom: 5px;
+              }
+              &.mobile{
+                display: none;
+              }
+            }
+          }
+          span {
+            color:#fff;
+            font-size: 28px;
+            position: relative;
+            left: 9px;
+          }
+        }
+      }
+    }
+    .total-consumption-info-box{
+      height: 100px;
+      margin: 0 @left-distance;
+      position: relative;
+      top:-25px;
+      background-color: #fff;
+      .r(4px);
+      .f();
+      align-items: center;
+      >div{
+        .size(33%,50px);
+        position: relative;
+        .f(column);
+        justify-content: center;
+        align-items: center;
+        .val{
+          color: @dark-color;
+          font-size: 16px;
+          margin-bottom: 5px;
+        }
+        .key{
+          color: @gray-color;
+          font-size: 12px;
+        }
+        &.border {
+          &::after {
+            content: '';
+            position: absolute;
+            .size(1px, 25px);
+            background-color:@gray-lighten-color;
+            right: 0;
+            top:15px;
+          }
+        }
+      }
+    }
+  }
+  .other-info-box{
+    .my-other-info-box{
+      .car-item {
+        @w:50px;
+        padding: 15px;
+        background-color: #fff;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        box-sizing: border-box;
+        text-decoration: none;
+        &.margin {
+          margin: 15px 0;
+        }
+        .icon-car {
+          flex-basis: @w+15px;
+          height: 100%;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          > img {
+            display: inline-block;
+            .size(@w,@w);
+            border-radius: @w;
+          }
+        }
+        .info-box {
+          flex: 1;
+          .car-number {
+            font-size: 13px;
+            color: #333333;
+            margin-bottom: 10px;
+          }
+          .car-detail {
+            color: @gray-color;
+            font-size: 12px;
+          }
+        }
+        .icon-right{
+          font-size: 24px;
+          color: @gray-color;
+          position: relative;
+          left: 7px;
+        }
+      }
+      .info-item{
+        background-color: #fff;
+        .size(100%,45px);
+        .f();
+        align-items: center;
+        padding:0 @left-distance;
+        box-sizing: border-box;
+        text-decoration: none;
+        &.border{
+          border-bottom: 1px solid @gray-lighten-color;
+        }
+        &.margin{
+          margin-top:10px;
+        }
+        &:active{
+          background-color: darken(#fff,10%);
+        }
+        .icon-box {
+          flex-basis:30px;
+          height: 100%;
+          .f();
+          align-items: center;
+          img {
+            .size(15px, 18px);
+            &.invitation-icon {
+              .size(20px, auto);
+            }
+          }
+        }
+        .title-box{
+          flex: 1;
+          color: #333333;
+          font-size: 13px;
+        }
+        .icon-right{
+          font-size: 24px;
+          color: @gray-color;
+          position: relative;
+          left: 7px;
+        }
+      }
+    }
+  }
+  .building-box{
+    .size(100%,40px);
+    .f();
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    img{
+      .size(16px,20px);
+      margin-right: 10px;
+    }
+    span{
+      font-size: 13px;
+      color:@gray-color;
+    }
+  }
+}

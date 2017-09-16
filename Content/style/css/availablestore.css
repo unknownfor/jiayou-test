@@ -1,0 +1,6 @@
+.available-store-wrapper {
+  min-height: 100vh;
+}
+.available-store-wrapper .location-name {
+  display: none;
+}

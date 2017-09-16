@@ -1,0 +1,64 @@
+//修改时间 2017年9月13日17:18:40
+.menu-tabs {
+  .f();
+  .size(100%, 100%);
+  justify-content: space-around;
+  li {
+    .size(25%, 100%);
+    padding: 1px 0;
+    a {
+      .size(100%, 100%);
+      .f(column);
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      span {
+        background-size: 22px 22px;
+        margin-bottom: 2px;
+        display: block;
+        .size(22px, 22px);
+        &.home-icon {
+          background-image: url(../../images/menu/home.png);
+        }
+        &.car-icon {
+          background-image: url(../../images/menu/car.png);
+        }
+        &.activity-icon {
+          background-image: url(../../images/menu/activity.png);
+        }
+        &.my-icon {
+          background-image: url(../../images/menu/my.png);
+        }
+      }
+      label {
+        font-size: 12px;
+        color: @gray-color;
+        &.selected {
+          color: @red-main-color;
+        }
+      }
+    }
+    &:active {
+      background-color: #f3f1f1;
+    }
+    &.selected {
+      span {
+        &.home-icon {
+          background-image: url(../../images/menu/home@selected.png);
+        }
+        &.car-icon {
+          background-image: url(../../images/menu/car@selected.png);
+        }
+        &.activity-icon {
+          background-image: url(../../images/menu/activity@selected.png);
+        }
+        &.my-icon {
+          background-image: url(../../images/menu/my@selected.png);
+        }
+      }
+      label {
+        color: @red-main-color;
+      }
+    }
+  }
+}

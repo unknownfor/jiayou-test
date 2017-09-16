@@ -1,0 +1,87 @@
+.coupon-detail-wrapper{
+  min-height: 100vh;
+  @left-distance:15px;
+  opacity: 0;
+  &.show{
+    opacity: 1;
+  }
+  #coupon-detail-main{
+    margin:20px @left-distance;
+  }
+  .btns-box{
+    width: 65%;
+    margin: 30px auto;
+    .btn{
+      .size(100%,40px);
+      line-height: 40px;
+      margin-bottom: 15px;
+    }
+  }
+  .available-store-box{
+    .size(100%,45px);
+    background-color: #fff;
+    .f();
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    color: @dark-color;
+    padding: 0 @left-distance;
+    box-sizing: border-box;
+    &:active{
+      background-color: darken(#fff,10%);
+    }
+    .right-box{
+      flex-basis: 105px;
+      .f();
+      justify-content: flex-end;
+      position: relative;
+      right: -5px;
+    }
+  }
+  .rule-box{
+    margin-top: 20px;
+    padding: 0 @left-distance;
+    font-size: 12px;
+    .rule-title{
+      color: @dark-color;
+      position: relative;
+      margin-left: 10px;
+      height: 16px;
+      &:before{
+        display: inline-block;
+        position: absolute;
+        content: '';
+        .size(6px,6px);
+        .r(6px);
+        background-color: @dark-color;
+        top: 8px;
+        margin-top: -3px;
+        left: -10px;
+      }
+    }
+    #rule-detail{
+      padding: 0 10px;
+      color: @gray-color;
+    }
+  }
+
+  #QRCode-modal-box {
+    &.show {
+      .f;
+    }
+    .modal-box-main{
+      height: 300px;
+      padding: 25px;
+      text-align: center;
+      box-sizing: border-box;
+      img{
+        .size(205px,205px);
+      }
+      >div{
+        margin-top: 20px;
+        font-size: 13px;
+        color: @gray-color;
+      }
+    }
+  }
+}

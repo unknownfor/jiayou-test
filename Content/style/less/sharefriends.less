@@ -1,0 +1,166 @@
+.line(@color:@red-main-color,@w:64px){
+  position: absolute;
+  content: '';
+  top: 2px;
+  .size(@w, 2px);
+  background-color: @color;
+  &.white{
+    background-color: #fff;
+  }
+}
+.share-friends-wrapper{
+  min-height: 100vh;
+  @left-distance:15px;
+  background-color: #f7342d;
+  opacity: 0;
+  &.show{
+    opacity: 1;
+  }
+  .bg-img{
+    width: 100%;
+  }
+
+  .header-line-box{
+    .size(100%,30px);
+    .f();
+    align-items: center;
+    justify-content: center;
+    .point{
+      position: relative;
+      display: block;
+      @h:6px;
+      @w:64px;
+      .size(@h,@h);
+      .r(@h);
+      background-color: @red-main-color;
+      &.white{
+        background-color: #fff;
+        @w:100px;
+        &.first{
+          &:before{
+            .line(#fff,@w);
+            left: -@w;
+          }
+        }
+        &.last{
+          &:after{
+            .line(#fff,@w);
+            right: -@w;
+          }
+        }
+      }
+
+      &.first{
+        &:before{
+          .line();
+          left: -@w;
+        }
+      }
+      &.last{
+        &:after{
+          .line();
+          right: -@w;
+        }
+      }
+    }
+    .header-txt{
+      font-size: 15px;
+      margin:0 10px;
+      color: @red-main-color;
+      &.white{
+        color: #fff;
+      }
+    }
+  }
+
+  .content-box {
+    background-color: #fff;
+    margin: 10px 15px;
+    padding:15px 25px;
+    .r(6px);
+    display: none;
+    &.new-user {
+
+    }
+    &.old-user {
+      //height: 175px;
+    }
+
+    .main-box{
+      .f(column);
+      justify-content: center;
+      align-items: center;
+      margin: 24px 0;
+      font-size: 13px;
+      color: @dark-color;
+      span{
+        line-height: 23px;
+      }
+    }
+  }
+  .bottom-box {
+    margin-top: 20px;
+    .rule-box {
+      padding: 8px 38px;
+      font-size: 12px;
+      color: #fff;
+      div {
+        line-height: 23px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .share-friends-wrapper {
+    .header-line-box {
+      .point {
+        @h: 6px;
+        @w: 38px;
+        .size(@h, @h);
+        .r(@h);
+        &.white {
+          @w: 90px;
+          &.first {
+            &:before {
+              .line(#fff, @w);
+              left: -@w;
+            }
+          }
+          &.last {
+            &:after {
+              .line(#fff, @w);
+              right: -@w;
+            }
+          }
+        }
+        .line(@color:@red-main-color,@w:38px) {
+          .size(@w, 2px);
+          background-color: @color;
+          &.white {
+            background-color: #fff;
+          }
+        }
+        &.first {
+          &:before {
+            .line();
+            left: -@w;
+          }
+        }
+        &.last {
+          &:after {
+            .line();
+            right: -@w;
+          }
+        }
+      }
+    }
+
+    .bottom-box {
+      margin-top: 10px;
+      .rule-box {
+        padding: 8px 20px;
+      }
+    }
+  }
+}

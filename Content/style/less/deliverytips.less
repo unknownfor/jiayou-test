@@ -1,0 +1,32 @@
+.delivery-tips-wrapper{
+  min-height: 100vh;
+  @left-distance:15px;
+  #delivery-tips-main {
+    margin:10px @left-distance;
+    height: 200px;
+    .content{
+      .f(column);
+      .size(100%,100%);
+      background-color: #fff;
+      .r(5px);
+      justify-content: center;
+      align-items: center;
+      .iconfont{
+        color: @red-main-color;
+        font-size: 36px;
+      }
+      .tips-title{
+        font-size: 15px;
+        color: @gray-color;
+        margin-top: 15px;
+      }
+      .tip-detail{
+        margin-top: 30px;
+        text-align: center;
+        font-size: 14px;
+        line-height: 25px;
+        color: @gray-color;
+      }
+    }
+  }
+}

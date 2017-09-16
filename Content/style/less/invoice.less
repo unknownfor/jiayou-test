@@ -1,0 +1,214 @@
+/*发票*/
+#invoice-box{
+  @left-distance:15px;
+  &.show{
+    .f;
+    animation:showing 3s ease-in;
+    animation-fill-mode: forwards;
+  }
+  .modal-box-main {
+    background-color: @wrapper-bg-color;
+    .size(95%,95%);
+    position: relative;
+    display: none;
+    &:first-child{
+      display: block;
+    }
+
+  }
+  .location-name {
+    .f();
+    .size(100%,100%);
+    justify-content: space-between;
+    align-items: center;
+    .close-icon {
+      margin-right: 15px;
+    }
+  }
+
+  .invoice-ul-main {
+    position: absolute;
+    top:40px;
+    width: 100%;
+    bottom: 50px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding-bottom: 10px;
+    #invoice-ul {
+      li {
+        &:active {
+          //background-color: darken(#fff,10%);
+          //transform: scale(0.99);
+        }
+        .f();
+        .size(100%, 70px);
+        background-color: #fff;
+        margin-bottom: 10px;
+        .left-box {
+          .size(40px, 100%);
+          margin-bottom: 10px;
+          .f();
+          justify-content: center;
+          align-items: center;
+          .iconfont {
+            font-size: 22px;
+            color: @gray-color;
+            &.icon-checkedon {
+              color: @red-main-color;
+            }
+          }
+          &:active {
+            background-color: darken(#fff, 10%);
+          }
+        }
+        .middle-box {
+          flex: 1;
+          margin-right: 5px;
+          .f(column);
+          justify-content: center;
+          .invoice-title {
+            font-size: 14px;
+            color: @dark-color;
+            margin-bottom: 4px;
+            .txt-ellipsis-p(2);
+          }
+          .invoice-taxno {
+            font-size: 12px;
+            color: @gray-color;
+          }
+        }
+        .right-box {
+          .size(85px, 100%);
+          margin-right: 8px;
+          .f(column);
+          justify-content: center;
+          align-items: center;
+          padding: 5px 0;
+          box-sizing: border-box;
+          > div {
+            .size(100%, 100%);
+            .f();
+            align-items: center;
+            justify-content: space-around;
+            &.single-item{
+              position: relative;
+              top: -10px;
+              height: 20px;
+            }
+          }
+          .invoice-default-btn {
+            color: @gray-color;
+            span {
+              font-size: 13px;
+              &.iconfont {
+                font-size: 15px;
+              }
+              &.txt {
+                margin-top: 3px;
+              }
+            }
+            &:active {
+              color: darken(@gray-color, 70%);
+            }
+          }
+          .invoice-item-btns {
+            span {
+              @color: #979797;
+              font-size: 12px;
+              border: 1px solid @color;
+              color: @color;
+              .r(3px);
+              padding: 1px 5px;
+              &:active {
+                background-color: darken(#fff, 30%);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .operate-invoice-ul{
+    .size(100%,auto);
+    background-color: #fff;
+    margin-bottom: 20px;
+    li{
+      .f;
+      .size(100%,50px);
+      font-size: 14px;
+      align-items: center;
+      padding: 0 @left-distance;
+      box-sizing: border-box;
+      position: relative;
+      &.border{
+        border-bottom: 1px solid @gray-lighten-color;
+      }
+      &.hide{
+        display: none;
+      }
+      .key{
+        flex-basis: 70px;
+        color: @dark-color;
+      }
+      .val {
+        flex: 1;
+        height: 100%;
+        .f();
+        align-items: center;
+        input {
+          .size(100%,100%);
+          padding: 1px 5px;
+          box-sizing: border-box;
+          border: none;
+          font-size: 14px;
+          letter-spacing: 1px;
+          color: @gray-color;
+          transition: all ease-out 3s;
+        }
+        &.invoice-type-btns{
+          justify-content: flex-end;
+          .btn{
+            .size(50px,28px);
+            line-height: 28px;
+            &:first-child{
+              margin-right: 10px;
+            }
+            &:active{
+              background-color: @red-main-color;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .bottom-box {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 45px;
+    padding: 5px 0;
+    line-height: 45px;
+    background-color: #fff;
+  }
+  .invoice-btn {
+    margin: 0 15px;
+    height: 45px;
+    line-height: 45px;
+    font-size: 15px;
+    .f();
+    align-content: center;
+    justify-content: center;
+    color: #fff;
+    span {
+      font-size: 23px;
+      margin-right: 8px;
+      color: #fff;
+    }
+    &.cancel-btn {
+      margin-top: 10px;
+    }
+  }
+}

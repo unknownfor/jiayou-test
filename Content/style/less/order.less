@@ -1,0 +1,51 @@
+@import "invoice";
+.order-wrapper{
+  @left-distance:15px;
+  .order-info-item {
+    @h: 90px;
+    .f;
+    background-color: #fff;
+    .size(100%, @h/2);
+    font-size: 14px;
+    align-items: center;
+    padding: 0 @left-distance;
+    box-sizing: border-box;
+    .key {
+      flex-basis: 60px;
+    }
+    .val {
+      flex: 1;
+      .f();
+      align-items: center;
+      justify-content: flex-end;
+      height: 100%;
+      padding: 1px 5px;
+      box-sizing: border-box;
+      border: none;
+      font-size: 14px;
+      color: @gray-color;
+      transition: all ease-out 3s;
+      #discount-amount {
+        color: @red-main-color;
+      }
+      .selected-invoice-title{
+        .txt-ellipsis-p(1);
+        font-size: 12px;
+      }
+      .icon-right {
+        margin-left: 5px;
+        color: #8A8A8A;
+      }
+    }
+    &.gas-type-amount {
+      margin-bottom: 10px;
+    }
+    &.discount-default-box {
+      border-bottom: 1px solid @gray-lighten-color;
+    }
+  }
+  .order-btn{
+    margin-top: 20px;
+    display: none;
+  }
+}

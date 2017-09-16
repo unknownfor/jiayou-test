@@ -1,0 +1,47 @@
+.unbind-mobile-wrapper {
+  background-color: @wrapper-bg-color;
+  @left-distance: 15px;
+  .main-box {
+    margin-top: 35px;
+    padding: 0 10px;
+    >div{
+      text-align: center;
+    }
+    .icon-box{
+      @h:40px;
+      .size(100%,@h);
+      margin-bottom:8px;
+      div{
+        margin: 0 auto;
+        .size(@h,@h);
+        .r(@h);
+        background-color: #fff;
+        line-height: @h;
+        .f();
+        justify-content: center;
+        align-items: center;
+        img{
+          //margin: 10px;
+          .size(18px,auto);
+        }
+      }
+    }
+    .tips-txt{
+      font-size: 12px;
+      color: @gray-color;
+      margin-bottom:9px;
+    }
+    .mobile{
+      font-size: 21px;
+      color: @dark-color;
+      margin-bottom:12px;
+    }
+  }
+  .btn{
+    margin-top: 10px;
+    a{
+      display: block;
+      color: #fff;
+    }
+  }
+}

@@ -1,0 +1,88 @@
+.gas-wrapper{
+  @left-distance:15px;
+  .form-box{
+    @h:106px;
+    .size(100%,@h);
+    background-color: #fff;
+    .form-box-item{
+      .f;
+      .size(100%,@h/2);
+      font-size: 14px;
+      align-items: center;
+      padding: 0 @left-distance;
+      box-sizing: border-box;
+      position: relative;
+      //margin-bottom: 10px;
+      &:first-child {
+        border-bottom: 1px solid @gray-lighten-color;
+      }
+      .key{
+        flex-basis: 50px;
+      }
+      input{
+        flex:1;
+        height: 100%;
+        //padding:1px 5px;
+        color: @gray-color;
+        background-color: transparent;
+      }
+      .gas-result-info{
+        //.size(40px,auto);
+        right: 0;
+        top: 10px;
+        font-size: 14px;
+        color: @dark-color;
+        text-align: center;
+        display: none;
+        padding: 0 5px;
+        &.show{
+          display: block;
+        }
+      }
+    }
+  }
+
+  .common-amount-box{
+    @h:32px;
+    height: @h;
+    margin: 15px @left-distance;
+    .f();
+    align-items: center;
+    justify-content: space-between;
+    display: none;
+    &.show{
+      display: flex;
+    }
+    >div{
+      .size(22%,100%);
+      font-size: 14px;
+      text-align: center;
+      line-height:@h;
+      color: @dark-color;
+      background-color: #fff;
+      .r(4px);
+      &.selected{
+        .btn;
+      }
+      &:active{
+       background-color: darken(#fff,20%);
+      }
+    }
+  }
+
+  .discount-desc-box{
+    background-color: #fff;
+    color: @gray-color;
+    font-size: 14px;
+    @h:45px;
+    height: @h;
+    margin: 15px 0;
+    padding: 0 @left-distance;
+    line-height: @h;
+    display: none;
+  }
+
+  .order-btn{
+    margin-top: 20px;
+  }
+}

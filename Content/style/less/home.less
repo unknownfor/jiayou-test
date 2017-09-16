@@ -1,0 +1,154 @@
+
+.home-wrapper{
+  //height: 100%;
+  background-color: @wrapper-bg-color;
+  display: none;
+  //&.no-scroll{
+  //  overflow:hidden;
+  //}
+}
+#coupon{
+  bottom: 51px;
+  &.show{
+    .f;
+    animation:showing 3s ease-in;
+    animation-fill-mode: forwards;
+  }
+  .modal-box-main{
+    padding: 20px 20px;
+    box-sizing: border-box;
+    .f(column);
+    .coupon-content {
+      flex: 1;
+      overflow-y: auto;
+    }
+    .coupon-btn{
+      height: 45px;
+      margin-top: 20px;
+      .btn{
+        .size(80%,100%);
+        margin:0 auto;
+        .r(45px);
+        line-height:45px;
+      }
+    }
+  }
+}
+@keyframes showing
+{
+  to {
+    transform: scale(1);
+  }
+}
+.banner-box {
+  .size(100%,175px);
+  #banner-main {
+    height: 100%;
+  }
+}
+.station-box{
+  //position: relative;
+  .station-main {
+    display: none;
+  }
+  .more-station-btn {
+    //border-top: 1px solid #E3E3E3;
+    border-top: 1px solid #E3E3E3;
+    text-align: center;
+    @h:54px;
+    @h2:14px;
+    .size(100%,@h);
+    .has-loaded-all{
+      display: none;
+    }
+    .station-btn-tips{
+      .size(100%,@h - @h2);
+      background-color: #fff;
+      text-align: center;
+      font-size: 13px;
+      color: @dark-color;
+      line-height: @h - @h2;
+      &.station-btn-main {
+        &:active {
+          color: @red-main-color;
+        }
+      }
+    }
+    .trapezoid-box{
+      @w:93px;
+      .size(@w,@h2);
+      margin: 0 auto;
+      position: relative;
+      background-image:url('../../images/home/arrow.png');
+      background-size:@w @h2;
+      span{
+        font-size: 26px;
+        color: @gray-color;
+        position: relative;
+        top: -8px;
+      }
+    }
+  }
+  .no-station{
+    background-color: #fff;
+    padding: 10px 0;
+    .size(100%,68px);
+    box-sizing: border-box;
+    display: none;
+    div{
+      text-align: center;
+      font-size: 13px;
+      color: @dark-color;
+      span{
+        font-size: 25px;
+        color: @dark-color;
+      }
+    }
+  }
+}
+
+#confirm－box {
+  &.show {
+    .f;
+    animation: showing 3s ease-in;
+    animation-fill-mode: forwards;
+  }
+  .modal-box-main {
+    .confirm-main {
+      >div {
+        text-align: center;
+        color: @dark-color;
+        &.confirm-tips{
+          font-size: 14px;
+        }
+        &.confirm-btn {
+          @h:36px;
+          .size(auto,@h);
+          margin: 0 27px;
+          color: #fff;
+          line-height: @h;
+        }
+        &.confirm-alert{
+          margin-top: 8px;
+          font-size: 13px;
+        }
+        &.no-duty{
+          margin-top: 5px;
+          color: @red-main-color;
+          font-size: 13px;
+        }
+        &#current-station-name {
+          color: @red-main-color;
+          font-size: 16px;
+          margin: 25px;
+          .txt-ellipsis-p(2);
+        }
+      }
+    }
+  }
+}
+
+#cover-box{
+  .cover-box;
+  display: block;
+}

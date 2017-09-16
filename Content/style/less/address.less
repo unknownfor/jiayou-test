@@ -1,0 +1,73 @@
+.address-wrapper {
+  @left-distance:15px;
+  position: relative;
+  height: 100vh;
+  .address-ul-main {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    bottom: 50px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding-bottom: 10px;
+    #address-ul {
+      li {
+        border: 1px solid #fff;
+        box-sizing: border-box;
+        &:active {
+          //background-color: darken(#fff,10%);
+          //transform: scale(0.99);
+        }
+        &.alert{
+          border: 1px solid @red-main-color;
+        }
+        &.show{
+          display: flex;
+        }
+        &.hide{
+          display: none;
+        }
+        .f();
+        .size(100%, 50px);
+        background-color: #fff;
+        margin-top: 10px;
+        align-items: center;
+        .normal-input{
+          flex: 1;
+          height: 100%;
+          padding-left: 10px;
+          box-sizing: border-box;
+          font-size: 13px;
+          color: @dark-color;
+        }
+        .delete-box {
+          flex-basis: 60px;
+          height: 100%;
+          .f();
+          justify-content: center;
+          align-items: center;
+          &:active {
+            background-color: darken(#fff,10%);
+          }
+          span {
+            color: @dark-color;
+          }
+        }
+      }
+    }
+  }
+  .bottom-box {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 45px;
+    padding: 5px 0;
+    line-height: 45px;
+    background-color: #fff;
+    .address-btn{
+      display: block;
+      margin: 0 @left-distance;
+    }
+  }
+}

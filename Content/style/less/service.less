@@ -1,0 +1,107 @@
+.service-wrapper {
+  padding-bottom: 70px;
+  padding-top: 145px;
+  .service-menu {
+    position: fixed;
+    width: 100%;
+    max-width: 750px;
+    top: 0;
+    border-bottom: 1px solid #dfdfdf;
+    background: #fff;
+    z-index: 999;
+    .class-wrapper {
+      padding: 20px 5px;
+      display: flex;
+      .service-class {
+        flex: 1;
+        padding: 0 5px;
+        .class-content {
+          display: block;
+          border-radius: 5px;
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+    .place-wrapper {
+      padding: 0 7.5px;
+      display: flex;
+      margin-bottom: 13px;
+      .place-select {
+        flex: 1;
+        padding: 0 7.5px;
+        position: relative;
+        .select {
+          width: 100%;
+          height: 28px;
+          border-radius: 3px;
+          border: 1px solid #dfdfdf;
+        }
+      }
+    }
+  }
+  .service-content {
+    .service-list {
+      background: #fff;
+      padding: 10px 15px;
+      margin-top: 10px;
+      position: relative;
+      a{
+        display:block;
+        overflow:hidden;
+        .photo {
+          width: 50px;
+          height: 50px;
+          float: left;
+          background: #f5f5f5;
+        }
+        .info {
+          margin-left: 12px;
+          float: left;
+          .name {
+            color: #333;
+          }
+          .place {
+            color: #8a8a8a;
+            font-size: 12px;
+            margin-top: 8px;
+          }
+        }
+        .distance {
+          position: absolute;
+          top: 40px;
+          right: 15px;
+          color: #8a8a8a;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+  .loadstatus-info {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 13px;
+    color: #333;
+    margin-top: 10px;
+  }
+  .no-station{
+    background-color: #fff;
+    padding: 10px 0;
+    width: 100%;
+    height: 68px;
+    box-sizing: border-box;
+    display: none;
+    div{
+      text-align: center;
+      font-size: 13px;
+      color: #333;
+      span{
+        font-size: 25px;
+        color: #333;
+      }
+    }
+  }
+}
