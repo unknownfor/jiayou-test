@@ -4332,6 +4332,14 @@ a:active {
   -webkit-background-size: 24px, 18px;
   background-size: 24px, 18px;
 }
+.carinfo-wrapper .info-item .icon-help {
+  display: inline-block;
+  background: url("../../images/mycar/help.png") no-repeat;
+  width: 18px;
+  height: 18px;
+  -webkit-background-size: 18px, 18px;
+  background-size: 18px, 18px;
+}
 .carinfo-wrapper .info-item.load-box {
   color: #a8a8a8;
 }
@@ -4359,6 +4367,89 @@ a:active {
 }
 .carinfo-wrapper .border {
   border-bottom: 1px solid #dfdfdf;
+}
+.carinfo-wrapper .help-box {
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: rgba(33, 33, 33, 0.8);
+  font-size: 14px;
+  display: none;
+  text-align: center;
+}
+.carinfo-wrapper .help-box .container {
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+.carinfo-wrapper .help-box .container .help-img {
+  padding: 20px;
+  position: relative;
+}
+.carinfo-wrapper .help-box .container .help-img > img {
+  display: inline-block;
+  max-width: 280px;
+}
+.carinfo-wrapper .help-box .container .confirm {
+  height: 45px;
+  line-height: 45px;
+  color: #eb4452;
+  font-weight: bold;
+  border-top: 1px solid #dfdfdf;
+}
+.carinfo-wrapper .help-box .container .angle {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  border-top: solid 3px #bababa;
+  border-left: solid 3px #bababa;
+}
+.carinfo-wrapper .help-box .container .angle.top-left {
+  top: 12px;
+  left: 12px;
+}
+.carinfo-wrapper .help-box .container .angle.top-right {
+  top: 12px;
+  right: 12px;
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.carinfo-wrapper .help-box .container .angle.bottom-left {
+  bottom: 12px;
+  left: 12px;
+  -webkit-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  transform: rotate(270deg);
+}
+.carinfo-wrapper .help-box .container .angle.bottom-right {
+  bottom: 12px;
+  right: 12px;
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+.carinfo-wrapper .help-box.show {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  opacity: 1;
+}
+@media screen and (max-width: 320px) {
+  .carinfo-wrapper .help-box .container .help-img > img {
+    max-width: 240px;
+  }
 }
 html,
 body {

@@ -63,6 +63,14 @@
         background-size: @w,@h;
       }
     }
+    .icon-help {
+      @w: 36px * 0.5;
+      display: inline-block;
+      background: url("../../images/mycar/help.png") no-repeat;
+      .size(@w,@w);
+      background-size: @w,@w;
+
+    }
     &.load-box {
       color: #a8a8a8;
       .load-more {
@@ -90,5 +98,74 @@
   }
   .border {
     border-bottom: 1px solid #dfdfdf;
+  }
+  .help-box {
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: rgba(33, 33, 33, 0.8);
+    font-size: 14px;
+    display: none;
+    text-align: center;
+    .container {
+      background-color: #ffffff;
+      border-radius: 10px;
+      .help-img {
+        padding: 20px;
+        position: relative;
+        > img {
+          display: inline-block;
+          //max-width: 240px;
+          max-width: 280px;
+        }
+      }
+      .confirm {
+        height: 45px;
+        line-height: 45px;
+        color: #eb4452;;
+        font-weight: bold;
+        border-top: 1px solid #dfdfdf;
+      }
+      .angle {
+        @margin:12px;
+        .size(20px,20px);
+        position: absolute;
+        border-top: solid 3px #bababa;
+        border-left: solid 3px #bababa;
+        &.top-left {
+          top: @margin;
+          left: @margin;
+        }
+        &.top-right {
+          top: @margin;
+          right: @margin;
+          transform: rotate(90deg);
+        }
+        &.bottom-left {
+          bottom: @margin;
+          left: @margin;
+          transform: rotate(270deg);
+        }
+        &.bottom-right {
+          bottom: @margin;
+          right: @margin;
+          transform: rotate(180deg);
+        }
+      }
+    }
+    &.show {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 1;
+    }
+  }
+}
+@media screen and (max-width: 320px) {
+  .carinfo-wrapper .help-box .container .help-img > img {
+    max-width: 240px;
   }
 }
