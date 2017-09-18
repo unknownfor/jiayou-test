@@ -4405,8 +4405,8 @@ a:active {
   width: 20px;
   height: 20px;
   position: absolute;
-  border-top: solid 3px #bababa;
-  border-left: solid 3px #bababa;
+  border-top: solid 2px #bababa;
+  border-left: solid 2px #bababa;
 }
 .carinfo-wrapper .help-box .container .angle.top-left {
   top: 12px;
@@ -4420,14 +4420,14 @@ a:active {
   transform: rotate(90deg);
 }
 .carinfo-wrapper .help-box .container .angle.bottom-left {
-  bottom: 12px;
+  bottom: 17px;
   left: 12px;
   -webkit-transform: rotate(270deg);
   -ms-transform: rotate(270deg);
   transform: rotate(270deg);
 }
 .carinfo-wrapper .help-box .container .angle.bottom-right {
-  bottom: 12px;
+  bottom: 17px;
   right: 12px;
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
