@@ -88,6 +88,17 @@
 
       }
     }
+    &.save-btn {
+      @h:35px;
+      line-height: @h;
+      text-align: center;
+      color: #ffffff;
+      > span {
+        border-radius: 4px;
+        background-color: #eb4452;
+        .size(100%,@h);
+      }
+    }
     &.margin {
       margin: 10px 0;
     }
@@ -162,6 +173,10 @@
       justify-content: center;
       opacity: 1;
     }
+  }
+  .none {
+    display: none;
+    opacity: 0;
   }
 }
 @media screen and (max-width: 320px) {
