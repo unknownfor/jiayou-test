@@ -4207,6 +4207,8 @@ a:active {
 .carinfo-wrapper {
   color: #333333;
   font-size: 13px;
+  position: relative;
+  margin-bottom: 80px;
 }
 .carinfo-wrapper .car-box {
   background-color: #FFFFFF;
@@ -4358,17 +4360,6 @@ a:active {
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
 }
-.carinfo-wrapper .info-item.save-btn {
-  line-height: 35px;
-  text-align: center;
-  color: #ffffff;
-}
-.carinfo-wrapper .info-item.save-btn > span {
-  border-radius: 4px;
-  background-color: #eb4452;
-  width: 100%;
-  height: 35px;
-}
 .carinfo-wrapper .info-item.margin {
   margin: 10px 0;
 }
@@ -4456,6 +4447,26 @@ a:active {
   -ms-flex-pack: center;
   justify-content: center;
   opacity: 1;
+}
+.carinfo-wrapper .save-btn {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+}
+.carinfo-wrapper .save-btn > span {
+  margin-top: 10px;
+  display: inline-block;
+  color: #fff;
+  line-height: 40px;
+  border-radius: 5px;
+  background-color: #eb4452;
+  width: 80%;
+  height: 40px;
 }
 .carinfo-wrapper .none {
   display: none;
