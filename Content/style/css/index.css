@@ -4788,6 +4788,32 @@ body {
   justify-content: center;
   opacity: 1;
 }
+.mylicense-wrapper .save-btn {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+}
+.mylicense-wrapper .save-btn > span {
+  margin-top: 10px;
+  display: inline-block;
+  color: #fff;
+  line-height: 40px;
+  border-radius: 5px;
+  background-color: #eb4452;
+  width: 80%;
+  height: 40px;
+}
+.mylicense-wrapper .save-btn.nouse {
+  pointer-events: none;
+}
+.mylicense-wrapper .save-btn.nouse > span {
+  background-color: #a5a5a5;
+}
 .mylicense-wrapper > p {
   color: #8a8a8a;
   padding: 0 15px;
