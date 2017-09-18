@@ -1,18 +1,19 @@
 /**
  * Created by mayoi on 2017/09/18.
  */
-//完善车辆信息
+//驾驶证查询
 
 
 define(['base', 'wx'], function (BaseClass,wx) {
-    function CarInfo($wrapper) {
+    function MyLicense($wrapper) {
         BaseClass.call(this, $wrapper);
 
         var that=this;
         //禁止页面滚动
         that.scrollControl(false);
 
-        $(document).on(this.eventName,'.icon-help',$.proxy(this,'showTipBox'));
+        $(document).on(this.eventName,'#jiashi',$.proxy(this,'showJiaTipBox'));
+        $(document).on(this.eventName,'#dangan',$.proxy(this,'showDangTipBox'));
 
         /*点击灰色部分关闭*/
         $(document).on(this.eventName,'.help-box',function(e){
@@ -32,13 +33,17 @@ define(['base', 'wx'], function (BaseClass,wx) {
     };
 
 
-    CarInfo.prototype = new BaseClass();
-    CarInfo.constructor = CarInfo;
+    MyLicense.prototype = new BaseClass();
+    MyLicense.constructor = MyLicense;
 
-    var pt = CarInfo.prototype;
+    var pt = MyLicense.prototype;
 
-    pt.showTipBox=function(){
-        $('.help-box').addClass('show');
+
+    pt.showJiaTipBox=function(){
+        $('.jiashi-box').addClass('show');
+    };
+    pt.showDangTipBox=function(){
+        $('.dangan-box').addClass('show');
     };
 
 
@@ -56,5 +61,5 @@ define(['base', 'wx'], function (BaseClass,wx) {
     };
 
 
-    return CarInfo;
+    return MyLicense;
 });

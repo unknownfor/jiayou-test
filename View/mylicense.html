@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <title>加油赞{$title}驾驶证查询</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="Resource-type" content="Document">
+    <!--禁止缩放-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <!--禁止数字识别为手机号-->
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta http-equiv="Cache" content="no-cache">
+    <link href="../Content/style/iconfont/iconfont.css" rel="stylesheet" type="text/css">
+    <link href="../Content/style/css/index.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="wrapper mylicense-wrapper">
+    <div class="info-item margin">
+        <div class="title-box">驾驶证号：</div>
+        <input class="car-input right" placeholder="请输入18位驾驶证号码">
+        <span class="icon-help" id="jiashi"></span>
+    </div>
+
+    <div class="info-item margin">
+        <div class="title-box">档案编号：</div>
+        <input class="car-input right" placeholder="请输入12位档案编号">
+        <span class="icon-help" id="dangan"></span>
+    </div>
+
+    <div class="info-item margin">
+        <div class="title-box">姓名：</div>
+        <input class="car-input right" placeholder="请输入车主姓名">
+    </div>
+
+    <div class="info-item border active-item">
+        <div class="title-box">准驾车型</div>
+        <select id="license-select" class="hide-form">
+            <!--C1、C2、C3、A2、B2、A1、A3、B1-->
+            <option value="C1">C1</option>
+            <option value="C2">C2</option>
+            <option value="C3">C3</option>
+            <option value="B1">B1</option>
+            <option value="B2">B2</option>
+            <option value="A1">A1</option>
+            <option value="A2">A2</option>
+            <option value="A3">A3</option>
+        </select>
+        <div class="right-box">
+            <div id="gender" class="val"></div>
+            <span class="iconfont icon-right"></span>
+        </div>
+    </div>
+
+    <div class="info-item margin">
+        <div class="title-box">领证日期：</div>
+        <input class="car-input right" placeholder="格式为年月日">
+    </div>
+
+    <div class="info-item margin">
+        <div class="title-box">有效期至：</div>
+        <input class="car-input right" placeholder="格式为年月日">
+    </div>
+
+    <p>您所填信息仅用于驾驶证查询服务，我们将对您的信息严格保密，请放心填写</p>
+
+    <!--弹窗-->
+    <div class="help-box jiashi-box">
+        <div class="container">
+            <div class="help-img">
+                <img src="../Content/images/mycar/驾驶证.png" />
+                <span class="angle top-left"></span>
+                <span class="angle top-right"></span>
+                <span class="angle bottom-left"></span>
+                <span class="angle bottom-right"></span>
+            </div>
+            <div class="confirm"><span>确定</span></div>
+        </div>
+    </div>
+    <div class="help-box dangan-box">
+        <div class="container">
+            <div class="help-img">
+                <img src="../Content/images/mycar/档案号.png"/>
+                <span class="angle top-left"></span>
+                <span class="angle top-right"></span>
+                <span class="angle bottom-left"></span>
+                <span class="angle bottom-right"></span>
+            </div>
+            <div class="confirm"><span>确定</span></div>
+        </div>
+    </div>
+</div>
+<script>
+    window.urlObject= {
+        js: "__JS__",
+        css: "__STYLE__",
+        image: "__IMG__",
+        json: "__JSON__",
+        ctrl:'__CTRL__',
+        apiUrl:'__API__',
+        appid:'__WX_AppID__',
+        redirectUrl:'__WX_RedirectUrl__',
+    };
+</script>
+<script data-main="../Javascript/app/main/mylicense" src="../Javascript/libs/require.js" type="text/javascript"></script>
+<!--<script type="application/javascript" src="../Javascript/app/controller/c-carinfo.js" />-->
+</body>
