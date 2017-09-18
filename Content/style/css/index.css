@@ -4488,6 +4488,71 @@ body {
     max-width: 240px;
   }
 }
+.carlicense-wrapper {
+  background-color: #FFFFFF;
+  height: 100%;
+  text-align: center;
+  color: #8a8a8a;
+  font-size: 13px;
+}
+.carlicense-wrapper .head-title {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.carlicense-wrapper .container {
+  margin: 0 20px;
+  height: 200px;
+  border: 2px dashed #d0d0d0;
+  position: relative;
+}
+.carlicense-wrapper .container .container-box {
+  display: inline-block;
+  width: 97%;
+  height: 95%;
+  margin: 5px;
+  background-color: #F5F5F5;
+}
+.carlicense-wrapper .container .container-box .license-box {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  opacity: 0;
+  z-index: 1000;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-user-select: none;
+  -moz-user-focus: none;
+  -moz-user-select: none;
+  -webkit-appearance: none;
+  outline: none;
+  border: none;
+}
+.carlicense-wrapper .container .container-box .license-box .loadImgBtn {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.carlicense-wrapper .container .container-box .license-img {
+  max-height: 100%;
+  width: 100%;
+}
+.carlicense-wrapper .container .container-box .uploadImg {
+  background: none;
+  outline: none;
+  border: 0;
+  width: 85px;
+  height: 85px;
+  border-radius: 85px;
+  margin: 25px 0;
+  cursor: pointer;
+}
+.carlicense-wrapper .container .container-box .description {
+  font-size: 16px;
+}
+.carlicense-wrapper .container:last-child {
+  margin-top: 30px;
+}
 html,
 body {
   background-color: #f5f5f5;
