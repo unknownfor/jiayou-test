@@ -1,7 +1,8 @@
 /**
  * Created by mayoi on 2017/09/18.
  */
-//驾驶证查询
+//驾驶证详情
+
 requirejs.config({
     // baseUrl: window.urlObject.js,
     paths: {
@@ -24,7 +25,7 @@ requirejs.config({
         super:'../model/super',
         base:'../model/base',
         myslider:'../model/myslider',
-        cchecklicense:'../controller/c-checklicense'
+        cmylicense:'../controller/c-mylicense'
     },
     shim: {
         fastclick: {
@@ -33,9 +34,9 @@ requirejs.config({
     }
 })
 
-define(['cchecklicense'],function (cCheckLicense) {
-    var $wrapper = $('.checklicense-wrapper');
-    new cCheckLicense($wrapper);
+define(['cmylicense'],function (cMyLicense) {
+    var $wrapper = $('.mylicense-wrapper');
+    new cMyLicense($wrapper);
 });
 
 

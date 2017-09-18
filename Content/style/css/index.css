@@ -4556,14 +4556,14 @@ body {
 .carlicense-wrapper .container.last-child {
   margin-top: 30px;
 }
-.mylicense-wrapper {
+.checklicense-wrapper {
   color: #333333;
   font-size: 13px;
   position: relative;
   margin-bottom: 80px;
   height: 100%;
 }
-.mylicense-wrapper .info-item {
+.checklicense-wrapper .info-item {
   background-color: #fff;
   width: 100%;
   height: 45px;
@@ -4591,17 +4591,17 @@ body {
   justify-content: space-between;
   position: relative;
 }
-.mylicense-wrapper .info-item .title-input {
+.checklicense-wrapper .info-item .title-input {
   margin-right: 5px;
 }
-.mylicense-wrapper .info-item .title-box {
+.checklicense-wrapper .info-item .title-box {
   -webkit-flex-basis: 80px;
   -ms-flex-preferred-size: 80px;
   flex-basis: 80px;
   color: #333333;
   font-size: 14px;
 }
-.mylicense-wrapper .info-item .car-input {
+.checklicense-wrapper .info-item .car-input {
   border: none;
   height: 75%;
   -webkit-box-flex: 1;
@@ -4609,14 +4609,14 @@ body {
   -ms-flex: 1;
   flex: 1;
 }
-.mylicense-wrapper .info-item .car-input.right {
+.checklicense-wrapper .info-item .car-input.right {
   text-align: right;
   padding-right: 5px;
 }
-.mylicense-wrapper .info-item .license-add {
+.checklicense-wrapper .info-item .license-add {
   display: inline-block;
 }
-.mylicense-wrapper .info-item .license-add .add-box {
+.checklicense-wrapper .info-item .license-add .add-box {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4635,14 +4635,14 @@ body {
   flex-basis: 24px;
   height: 100%;
 }
-.mylicense-wrapper .info-item .license-add .add-box .add-img {
+.checklicense-wrapper .info-item .license-add .add-box .add-img {
   width: 24px;
   height: 18px;
   background: url("../../images/mycar/camera.png") no-repeat;
   -webkit-background-size: 24px, 18px;
   background-size: 24px, 18px;
 }
-.mylicense-wrapper .info-item .icon-help {
+.checklicense-wrapper .info-item .icon-help {
   display: inline-block;
   background: url("../../images/mycar/help.png") no-repeat;
   width: 18px;
@@ -4650,13 +4650,13 @@ body {
   -webkit-background-size: 18px, 18px;
   background-size: 18px, 18px;
 }
-.mylicense-wrapper .info-item .icon-right {
+.checklicense-wrapper .info-item .icon-right {
   font-size: 24px;
   color: #8a8a8a;
   position: relative;
   left: 7px;
 }
-.mylicense-wrapper .info-item .hide-form {
+.checklicense-wrapper .info-item .hide-form {
   position: absolute;
   left: 0;
   right: 0;
@@ -4673,7 +4673,7 @@ body {
   outline: none;
   border: none;
 }
-.mylicense-wrapper .info-item .right-box {
+.checklicense-wrapper .info-item .right-box {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4689,28 +4689,28 @@ body {
   -ms-flex-align: center;
   align-items: center;
 }
-.mylicense-wrapper .info-item.load-box {
+.checklicense-wrapper .info-item.load-box {
   color: #a8a8a8;
 }
-.mylicense-wrapper .info-item.load-box .load-more {
+.checklicense-wrapper .info-item.load-box .load-more {
   margin: 0 auto;
   line-height: 45px;
 }
-.mylicense-wrapper .info-item.load-box .icon-right {
+.checklicense-wrapper .info-item.load-box .icon-right {
   display: inline-block;
   vertical-align: -2px;
   font-size: 24px;
   color: #8a8a8a;
 }
-.mylicense-wrapper .info-item.load-box .icon-right.down {
+.checklicense-wrapper .info-item.load-box .icon-right.down {
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
 }
-.mylicense-wrapper .info-item.margin {
+.checklicense-wrapper .info-item.margin {
   margin: 10px 0;
 }
-.mylicense-wrapper .help-box {
+.checklicense-wrapper .help-box {
   height: 100%;
   position: fixed;
   top: 0;
@@ -4722,58 +4722,58 @@ body {
   display: none;
   text-align: center;
 }
-.mylicense-wrapper .help-box .container {
+.checklicense-wrapper .help-box .container {
   background-color: #ffffff;
   border-radius: 10px;
 }
-.mylicense-wrapper .help-box .container .help-img {
+.checklicense-wrapper .help-box .container .help-img {
   padding: 20px;
   position: relative;
 }
-.mylicense-wrapper .help-box .container .help-img > img {
+.checklicense-wrapper .help-box .container .help-img > img {
   display: inline-block;
   max-width: 280px;
 }
-.mylicense-wrapper .help-box .container .confirm {
+.checklicense-wrapper .help-box .container .confirm {
   height: 45px;
   line-height: 45px;
   color: #eb4452;
   font-weight: bold;
   border-top: 1px solid #dfdfdf;
 }
-.mylicense-wrapper .help-box .container .angle {
+.checklicense-wrapper .help-box .container .angle {
   width: 20px;
   height: 20px;
   position: absolute;
   border-top: solid 2px #bababa;
   border-left: solid 2px #bababa;
 }
-.mylicense-wrapper .help-box .container .angle.top-left {
+.checklicense-wrapper .help-box .container .angle.top-left {
   top: 12px;
   left: 12px;
 }
-.mylicense-wrapper .help-box .container .angle.top-right {
+.checklicense-wrapper .help-box .container .angle.top-right {
   top: 12px;
   right: 12px;
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
 }
-.mylicense-wrapper .help-box .container .angle.bottom-left {
+.checklicense-wrapper .help-box .container .angle.bottom-left {
   bottom: 17px;
   left: 12px;
   -webkit-transform: rotate(270deg);
   -ms-transform: rotate(270deg);
   transform: rotate(270deg);
 }
-.mylicense-wrapper .help-box .container .angle.bottom-right {
+.checklicense-wrapper .help-box .container .angle.bottom-right {
   bottom: 17px;
   right: 12px;
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
 }
-.mylicense-wrapper .help-box.show {
+.checklicense-wrapper .help-box.show {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4788,7 +4788,7 @@ body {
   justify-content: center;
   opacity: 1;
 }
-.mylicense-wrapper .save-btn {
+.checklicense-wrapper .save-btn {
   position: fixed;
   left: 0;
   right: 0;
@@ -4798,7 +4798,7 @@ body {
   background-color: rgba(255, 255, 255, 0.8);
   text-align: center;
 }
-.mylicense-wrapper .save-btn > span {
+.checklicense-wrapper .save-btn > span {
   margin-top: 10px;
   display: inline-block;
   color: #fff;
@@ -4808,13 +4808,13 @@ body {
   width: 80%;
   height: 40px;
 }
-.mylicense-wrapper .save-btn.nouse {
+.checklicense-wrapper .save-btn.nouse {
   pointer-events: none;
 }
-.mylicense-wrapper .save-btn.nouse > span {
+.checklicense-wrapper .save-btn.nouse > span {
   background-color: #a5a5a5;
 }
-.mylicense-wrapper > p {
+.checklicense-wrapper > p {
   color: #8a8a8a;
   padding: 0 15px;
   line-height: 22px;
