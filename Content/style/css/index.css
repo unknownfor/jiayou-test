@@ -4468,6 +4468,12 @@ a:active {
   width: 80%;
   height: 40px;
 }
+.carinfo-wrapper .save-btn.nouse {
+  pointer-events: none;
+}
+.carinfo-wrapper .save-btn.nouse > span {
+  background-color: #a5a5a5;
+}
 .carinfo-wrapper .none {
   display: none;
   opacity: 0;
