@@ -4204,11 +4204,16 @@ a:active {
   font-size: 12px;
   color: #8a8a8a;
 }
+html,
+body {
+  height: 100%;
+}
 .carinfo-wrapper {
   color: #333333;
   font-size: 13px;
   position: relative;
   margin-bottom: 80px;
+  height: 100%;
 }
 .carinfo-wrapper .car-box {
   background-color: #FFFFFF;
