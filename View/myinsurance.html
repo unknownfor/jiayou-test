@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 
 <head>
-    <title>加油赞{$title}选择车险</title>
+    <title>加油赞{$title}我的车险</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="Resource-type" content="Document">
     <!--禁止缩放-->
@@ -18,32 +18,35 @@
     <link href="../Content/style/css/index.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-<div class="wrapper insurance-wrapper">
-    <div class="info-box border">
-        <a class="info-item border" href="__CTRL__/myinsurance">
-            <div class="info-left">
-                <img src="../Content/images/mycar/car.jpg" />
+<div class="wrapper myinsurance-wrapper">
+    <div class="head-box">
+        <img class="head-bg" src="../Content/images/mycar/car.jpg" />
+        <div class="head-detail">
+            <img class="head-img" src="../Content/images/mycar/car.jpg" />
+            <div class="head-name">中国人寿财险</div>
+            <div class="head-info-box">
+                <span class="head-info left">奥迪10000</span>
+                <span class="head-info">鄂jkhsdas</span>
             </div>
-            <div class="info-middle">大众汽车保险有限公司</div>
-            <span class="iconfont icon-right"></span>
-        </a>
-        <a class="info-item border" href="__CTRL__/myinsurance">
-            <div class="info-left">
-                <img src="../Content/images/mycar/car.jpg" />
-            </div>
-            <div class="info-middle">大众汽车保险有限公司</div>
-            <span class="iconfont icon-right"></span>
-        </a>
-        <a class="info-item border" href="__CTRL__/myinsurance">
-            <div class="info-left">
-                <img src="../Content/images/mycar/car.jpg" />
-            </div>
-            <div class="info-middle">大众汽车保险有限公司</div>
-            <span class="iconfont icon-right"></span>
-        </a>
+        </div>
+        <div class="delete">删除</div>
+    </div>
+    <div class="item-box">
+        <div class="info-box border">
+            <div class="info-left">联系电话</div>
+            <a class="info-right" href="tel:95595">95595</a>
 
+        </div>
+        <div class="info-box">
+            <div class="info-left">上次投保时间</div>
+            <input class="info-input" type="number" placeholder="用于提醒投保"/>
+            <span class="iconfont icon-right"></span>
+        </div>
     </div>
 
+    <div class="save-btn">
+        <a href="__CTRL__/insurance"><span>保存</span></a>
+    </div>
 </div>
 <script>
     window.urlObject= {
@@ -57,6 +60,6 @@
         redirectUrl:'__WX_RedirectUrl__',
     };
 </script>
-<script data-main="../Javascript/app/main/insurance" src="../Javascript/libs/require.js" type="text/javascript"></script>
+<script data-main="../Javascript/app/main/myinsurance" src="../Javascript/libs/require.js" type="text/javascript"></script>
 <!--<script type="application/javascript" src="../Javascript/app/controller/c-carinfo.js" />-->
 </body>

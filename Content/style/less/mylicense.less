@@ -1,58 +1,56 @@
 .mylicense-wrapper {
-    .info-box {
+  .info-box {
     background-color: #fff;
     margin-top: 15px;
     .info-item {
-        width: 100%;
-        height: 45px;
+      width: 100%;
+      height: 45px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 0 15px;
+      box-sizing: border-box;
+      text-decoration: none;
+      .info-left {
+        flex-basis: 100px;
+        height: 100%;
         display: flex;
         flex-direction: row;
         align-items: center;
-        padding: 0 15px;
-        box-sizing: border-box;
-        text-decoration: none;
-        .info-left {
-            flex-basis: 100px;
-            height: 100%;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            text-align:justify
-            color: #333333;
-        }
-        .info-right {
-            flex: 1;
-            color: #8a8a8a;
-            font-size: 13px;
-        }
-        &.border {
+        text-align:justify
+        color: #333333;
+      }
+      .info-right {
+        flex: 1;
+        color: #8a8a8a;
+        font-size: 13px;
+      }
+      &.border {
         border-bottom: 1px solid #dfdfdf;
-        }
-    }
-      .save-btn {
-        position: fixed;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        width: 100%;
-        height: 60px;
-        background-color: rgba(255, 255, 255, 0.8);
-        text-align: center;
-            > a {
-             .size(100%,40px);
-             display:inline-block;
-                 > span {
-                      margin-top: 10px;
-                      display: inline-block;
-                      color: #fff;
-                      line-height: 40px;
-                      border-radius: 5px;
-                      background-color: #eb4452;
-                      .size(80%,40px);
-                    }
-            }
-
-
       }
     }
+    .save-btn {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 60px;
+      background-color: rgba(255, 255, 255, 0.8);
+      text-align: center;
+      > a {
+        .size(100%,40px);
+        display:inline-block;
+        > span {
+          margin-top: 10px;
+          display: inline-block;
+          color: #fff;
+          line-height: 40px;
+          border-radius: 5px;
+          background-color: #eb4452;
+          .size(80%,40px);
+        }
+      }
+    }
+  }
 }

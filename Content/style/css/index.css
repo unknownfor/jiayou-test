@@ -4869,7 +4869,7 @@ body {
   -ms-flex-align: center;
   align-items: center;
   text-align: justify
-            color: #333333;
+        color: #333333;
 }
 .mylicense-wrapper .info-box .info-item .info-right {
   -webkit-box-flex: 1;
@@ -4983,6 +4983,154 @@ body {
 }
 .insurance-wrapper .info-box .info-item:last-child {
   border: none;
+}
+.myinsurance-wrapper .head-box {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  text-align: center;
+  color: #ffffff;
+}
+.myinsurance-wrapper .head-box .head-bg {
+  display: inline-block;
+  max-height: 180px;
+  width: 100%;
+  opacity: 0.5;
+  z-index: 4;
+}
+.myinsurance-wrapper .head-box .head-detail {
+  z-index: 5;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  right: 0;
+}
+.myinsurance-wrapper .head-box .head-detail .head-img {
+  width: 65px;
+  height: 65px;
+  border-radius: 65px;
+  display: inline-block;
+}
+.myinsurance-wrapper .head-box .head-detail .head-name {
+  font-size: 16px;
+  font-weight: bold;
+}
+.myinsurance-wrapper .head-box .head-detail .head-info-box {
+  display: inline-block;
+  font-size: 12px;
+  width: 100%;
+  margin-top: 5px;
+}
+.myinsurance-wrapper .head-box .head-detail .head-info-box .head-info {
+  padding-left: 8px;
+}
+.myinsurance-wrapper .head-box .head-detail .head-info-box .head-info.left {
+  padding: 0 8px 0 0;
+  border-right: 1px solid #fff;
+}
+.myinsurance-wrapper .head-box .delete {
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  font-size: 14px;
+  border: 1px solid #fff;
+  border-radius: 3px;
+  padding: 1px 3px;
+}
+.myinsurance-wrapper .item-box {
+  background-color: #fff;
+}
+.myinsurance-wrapper .item-box .info-box {
+  width: 100%;
+  height: 45px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0 15px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+.myinsurance-wrapper .item-box .info-box.border {
+  border-bottom: 1px solid #dfdfdf;
+}
+.myinsurance-wrapper .item-box .info-box .info-left {
+  -webkit-flex-basis: 90px;
+  -ms-flex-preferred-size: 90px;
+  flex-basis: 90px;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 13px;
+}
+.myinsurance-wrapper .item-box .info-box .info-right {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  color: #8a8a8a;
+  font-size: 13px;
+  text-align: right;
+  height: 45px;
+  line-height: 45px;
+}
+.myinsurance-wrapper .item-box .info-box .info-input {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  border: none;
+  text-align: right;
+  height: 75%;
+}
+.myinsurance-wrapper .item-box .info-box .icon-right {
+  font-size: 24px;
+  color: #8a8a8a;
+  position: relative;
+  left: 7px;
+}
+.myinsurance-wrapper .save-btn {
+  margin-top: 15px;
+  width: 100%;
+  height: 60px;
+  text-align: center;
+}
+.myinsurance-wrapper .save-btn > a {
+  display: inline-block;
+  width: 80%;
+  height: 50px;
+}
+.myinsurance-wrapper .save-btn > a > span {
+  margin-top: 10px;
+  display: inline-block;
+  color: #fff;
+  line-height: 40px;
+  border-radius: 5px;
+  background-color: #eb4452;
+  width: 100%;
+  height: 40px;
 }
 html,
 body {
