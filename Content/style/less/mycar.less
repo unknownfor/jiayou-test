@@ -145,7 +145,8 @@
   }
   .info-add {
     display: inline-block;
-    .size(100%,150px);
+    padding-bottom: 15px;
+    .size(100%,100%);
     background-color: #fff;
     text-decoration: none;
     color: #333333;
@@ -159,10 +160,10 @@
       .name {
         color: #333333;
         font-size: 14px;
-        padding: 10px 0;
+        padding-top: 10px;
       }
       .txt {
-        padding: 10px 0;
+        padding-top: 10px;
         color: #8a8a8a;
         font-size: 13px;
       }
@@ -170,32 +171,38 @@
     }
     .add-insurance-box {
       overflow-x: auto;
+      text-align: center;
+      padding: 15px 15px 0 15px;
       .insurance-box {
         margin: 0px 0 14px 0;
         white-space: nowrap;
+        overflow-y: hidden;
+        border-right: 1px solid rgba(145, 145, 145, 0.2);
+        width: 40%;
+        vertical-align: top;
+        margin-right: 5px;
         .head-box {
-          overflow-y: hidden;
-          border: 1px solid rgba(145, 145, 145, 0.2);
-          width: 40%;
           display: flex;
-          vertical-align: top;
-          margin-right: 5px;
-          @w:35px;
+          @w:45px;
           .head-img {
             flex: 0 0 @w;
             .size(@w,@w);
-            border: @w;
+            border-radius: @w;
             display: inline-block;
             margin-right: 8px;
           }
           .head-name {
+            line-height: @w;
             flex:1;
             color: #333333;
             font-size: 13px;
           }
         }
-        .bottom-info {
+        .bottom-info-txt {
           color: #8a8a8a;
+        }
+        &:last-child {
+          border-right: none;
         }
       }
     }
