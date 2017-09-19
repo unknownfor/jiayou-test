@@ -4112,7 +4112,7 @@ a:active {
   display: inline-block;
   background-color: #ffffff;
   margin-top: 15px;
-  padding: 15px 0;
+  padding-top: 15px;
   text-align: center;
   width: 100%;
 }
@@ -4137,8 +4137,132 @@ a:active {
   border-radius: 45px;
 }
 .mycar-wrapper .car-box .car-txt {
+  padding-bottom: 15px;
   color: #8a8a8a;
   font-size: 12px;
+}
+.mycar-wrapper .car-box .add-title {
+  background-color: #fff;
+  width: 100%;
+  height: 22px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 15px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.mycar-wrapper .car-box .add-title .title {
+  -webkit-box-flex: 6;
+  -webkit-flex: 6;
+  -ms-flex: 6;
+  flex: 6;
+  text-align: left;
+}
+.mycar-wrapper .car-box .add-title .add-car-btn {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  text-align: right;
+}
+.mycar-wrapper .car-box .add-title .add-car-btn > img {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  border-radius: 22px;
+}
+.mycar-wrapper .car-box .add-car-box .add-box {
+  padding: 15px;
+  background-color: #fff;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+.mycar-wrapper .car-box .add-car-box .add-box .car-left {
+  -webkit-flex-basis: 65px;
+  -ms-flex-preferred-size: 65px;
+  flex-basis: 65px;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.mycar-wrapper .car-box .add-car-box .add-box .car-left > img {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+}
+.mycar-wrapper .car-box .add-car-box .add-box .car-middle {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  text-align: left;
+}
+.mycar-wrapper .car-box .add-car-box .add-box .car-middle .car-name {
+  font-size: 13px;
+  color: #333333;
+  margin-bottom: 10px;
+}
+.mycar-wrapper .car-box .add-car-box .add-box .car-middle .car-number {
+  color: #8a8a8a;
+  font-size: 12px;
+}
+.mycar-wrapper .car-box .add-car-box .add-box .car-right {
+  font-size: 12px;
+  position: relative;
+  top: -14px;
+  padding: 2px 3px;
+  border-radius: 4px;
+  color: #8a8a8a;
+  border: 1px solid #8a8a8a;
+}
+.mycar-wrapper .car-box .add-car-box .add-box .car-right.active {
+  color: #eb4452;
+  border: 1px solid  #eb4452;
+}
+.mycar-wrapper .car-box .add-car-box .add-box.border {
+  border-bottom: 1px solid #dfdfdf;
+}
+.mycar-wrapper .car-box .add-car-box .add-box:last-child {
+  border: none;
 }
 .mycar-wrapper .info-item {
   background-color: #fff;
@@ -4162,6 +4286,7 @@ a:active {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   text-decoration: none;
+  color: #333333;
 }
 .mycar-wrapper .info-item .title-box {
   -webkit-box-flex: 1;
@@ -4183,6 +4308,75 @@ a:active {
   border-bottom: 1px solid #dfdfdf;
 }
 .mycar-wrapper .info-item.margin {
+  margin-top: 10px;
+}
+.mycar-wrapper .info-add {
+  display: inline-block;
+  width: 100%;
+  height: 150px;
+  background-color: #fff;
+  text-decoration: none;
+  color: #333333;
+}
+.mycar-wrapper .info-add .title-box {
+  padding-left: 15px;
+  padding-top: 10px;
+}
+.mycar-wrapper .info-add .add-license-box {
+  width: 100%;
+  text-align: center;
+}
+.mycar-wrapper .info-add .add-license-box .name {
+  color: #333333;
+  font-size: 14px;
+  padding: 10px 0;
+}
+.mycar-wrapper .info-add .add-license-box .txt {
+  padding: 10px 0;
+  color: #8a8a8a;
+  font-size: 13px;
+}
+.mycar-wrapper .info-add .add-insurance-box {
+  overflow-x: auto;
+}
+.mycar-wrapper .info-add .add-insurance-box .insurance-box {
+  margin: 0px 0 14px 0;
+  white-space: nowrap;
+}
+.mycar-wrapper .info-add .add-insurance-box .insurance-box .head-box {
+  overflow-y: hidden;
+  border: 1px solid rgba(145, 145, 145, 0.2);
+  width: 40%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  vertical-align: top;
+  margin-right: 5px;
+}
+.mycar-wrapper .info-add .add-insurance-box .insurance-box .head-box .head-img {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 35px;
+  -ms-flex: 0 0 35px;
+  flex: 0 0 35px;
+  width: 35px;
+  height: 35px;
+  border: 35px;
+  display: inline-block;
+  margin-right: 8px;
+}
+.mycar-wrapper .info-add .add-insurance-box .insurance-box .head-box .head-name {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  color: #333333;
+  font-size: 13px;
+}
+.mycar-wrapper .info-add .add-insurance-box .insurance-box .bottom-info {
+  color: #8a8a8a;
+}
+.mycar-wrapper .info-add.margin {
   margin-top: 10px;
 }
 .order-wrapper .order-info-item .key {

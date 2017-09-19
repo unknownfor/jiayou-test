@@ -5,7 +5,7 @@
     display: inline-block;
     background-color: #ffffff;
     margin-top: 15px;
-    padding: 15px 0;
+    padding-top: 15px;
     text-align: center;
     width: 100%;
     .title {
@@ -29,8 +29,88 @@
       }
     }
     .car-txt {
+      padding-bottom: 15px;
       color: #8a8a8a;
       font-size: 12px;
+    }
+    .add-title {
+      @w:22px;
+      background-color: #fff;
+      .size(100%,@w);
+      display: flex;
+      padding: 0 15px;
+      flex-direction: row;
+      align-items: center;
+      box-sizing: border-box;
+      .title {
+        flex: 6;
+        text-align: left;
+      }
+      .add-car-btn {
+        flex: 1;
+        text-align: right;
+        > img {
+          display: inline-block;
+          .size(@w,@w);
+          border-radius: @w;
+        }
+      }
+    }
+    .add-car-box {
+      .add-box {
+        padding: 15px;
+        background-color: #fff;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        box-sizing: border-box;
+        text-decoration: none;
+        .car-left {
+          flex-basis: 65px;
+          height: 100%;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          > img {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+          }
+        }
+        .car-middle {
+          flex: 1;
+          text-align: left;
+          .car-name {
+            font-size: 13px;
+            color: #333333;
+            margin-bottom: 10px;
+          }
+          .car-number {
+            color: #8a8a8a;
+            font-size: 12px;
+          }
+        }
+        .car-right {
+          font-size: 12px;
+          position: relative;
+          top: -14px;
+          padding: 2px 3px;
+          border-radius: 4px;
+          color: #8a8a8a;
+          border: 1px solid #8a8a8a;
+          &.active {
+            color: #eb4452;
+            border: 1px solid  #eb4452;
+          }
+        }
+        &.border {
+          border-bottom: 1px solid #dfdfdf;
+        }
+        &:last-child {
+          border: none;
+        }
+      }
     }
   }
   .info-item {
@@ -43,6 +123,7 @@
     padding: 0 15px;
     box-sizing: border-box;
     text-decoration: none;
+    color: #333333;
     .title-box {
       flex: 1;
       color: #333333;
@@ -57,6 +138,66 @@
     }
     &.border {
       border-bottom: 1px solid #dfdfdf;
+    }
+    &.margin {
+      margin-top: 10px;
+    }
+  }
+  .info-add {
+    display: inline-block;
+    .size(100%,150px);
+    background-color: #fff;
+    text-decoration: none;
+    color: #333333;
+    .title-box {
+      padding-left: 15px;
+      padding-top: 10px;
+    }
+    .add-license-box {
+      width: 100%;
+      text-align: center;
+      .name {
+        color: #333333;
+        font-size: 14px;
+        padding: 10px 0;
+      }
+      .txt {
+        padding: 10px 0;
+        color: #8a8a8a;
+        font-size: 13px;
+      }
+
+    }
+    .add-insurance-box {
+      overflow-x: auto;
+      .insurance-box {
+        margin: 0px 0 14px 0;
+        white-space: nowrap;
+        .head-box {
+          overflow-y: hidden;
+          border: 1px solid rgba(145, 145, 145, 0.2);
+          width: 40%;
+          display: flex;
+          vertical-align: top;
+          margin-right: 5px;
+          @w:35px;
+          .head-img {
+            flex: 0 0 @w;
+            .size(@w,@w);
+            border: @w;
+            display: inline-block;
+            margin-right: 8px;
+          }
+          .head-name {
+            flex:1;
+            color: #333333;
+            font-size: 13px;
+          }
+        }
+        .bottom-info {
+          color: #8a8a8a;
+        }
+      }
     }
     &.margin {
       margin-top: 10px;

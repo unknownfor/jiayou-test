@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-
 <head>
     <title>加油赞{$title}爱车管理</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -30,26 +29,88 @@
     </script>
 </head>
 <body>
-
 <div class="wrapper mycar-wrapper" >
     <div class="car-box">
-        <div class="title"><span>我的爱车</span></div>
-        <div class="car-add">
-            <a class="car-add-box" href="__CTRL__/addcar">
+        <!--未添加-->
+        <!--<div class="title"><span>我的爱车</span></div>-->
+        <!--<div class="car-add">-->
+            <!--<a class="car-add-box" href="__CTRL__/addcar">-->
+                <!--<img src="../Content/images/mycar/add.png" />-->
+            <!--</a>-->
+        <!--</div>-->
+        <!--<div class="car-txt">在这里发现我的爱车</div>-->
+        <!--已经添加-->
+        <div class="add-title">
+            <div class="title">我的爱车</div>
+            <div class="add-car-btn">
                 <img src="../Content/images/mycar/add.png" />
-            </a>
+            </div>
         </div>
-        <div class="car-txt">在这里发现我的爱车</div>
+        <div class="add-car-box">
+            <div class="add-box border">
+                <div class="car-left">
+                    <img src="../Content/images/mycar/car.jpg" />
+                </div>
+                <div class="car-middle">
+                    <div class="car-name">奥迪</div>
+                    <div class="car-number">A10923</div>
+                </div>
+                <div class="car-right">
+                    <span>设为默认</span>
+                </div>
+            </div>
+            <div class="add-box border">
+                <div class="car-left">
+                    <img src="../Content/images/mycar/car.jpg" />
+                </div>
+                <div class="car-middle">
+                    <div class="car-name">奥迪</div>
+                    <div class="car-number">A10923</div>
+                </div>
+                <div class="car-right active">
+                    <span>默认车辆</span>
+                </div>
+            </div>
+        </div>
     </div>
-    <a class="info-item margin border" href="__CTRL__/checklicense">
+    <!--<a class="info-item margin border" href="__CTRL__/checklicense">-->
+        <!--<div class="title-box">我的驾驶证</div>-->
+        <!--&lt;!&ndash;未添加&ndash;&gt;-->
+        <!--<span class="add-box"></span>-->
+    <!--</a>-->
+    <!--已添加-->
+    <a class="info-add margin" href="__CTRL__/checklicense">
         <div class="title-box">我的驾驶证</div>
-        <span class="add-box"></span>
+        <div class="add-license-box">
+            <div class="name">张志凤</div>
+            <div class="txt"><span>下次年审：</span><span>2078年1月1月</span></div>
+            <div class="txt"><span>累计扣分：</span><span>1分</span></div>
+        </div>
     </a>
-    <a class="info-item" href="__CTRL__/insurence">
-    <!--<a class="info-item" href="__CTRL__/myinsurence">-->
+    <!--<a class="info-item" href="__CTRL__/insurance">-->
+    <!--<a class="info-item" href="__CTRL__/myinsurance">-->
+        <!--<div class="title-box">我的车险</div>-->
+        <!--<span class="add-box"></span>-->
+    <!--</a>-->
+
+    <!--已经添加-->
+    <a class="info-add margin" href="__CTRL__/insurance">
         <div class="title-box">我的车险</div>
-        <span class="add-box"></span>
+        <div class="add-insurance-box">
+            <div class="insurance-box">
+                <div class="head-box">
+                    <!--<img class="head-img" src="__IMG__/mycar/car.jpg" />-->
+                    <img class="head-img" src="../Content/images/mycar/car.jpg" />
+                    <div class="head-name">中国人寿保险</div>
+                </div>
+                <div class="bottom-info">
+                    <span>到期时间：</span>
+                    <span>2018年5月17日</span>
+                </div>
+            </div>
+        </div>
     </a>
+
     <a class="info-item margin" href="/">
         <div class="title-box">我是私家车</div>
         <span class="add-box"></span>
