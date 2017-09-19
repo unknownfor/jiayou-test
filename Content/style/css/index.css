@@ -4789,10 +4789,10 @@ body {
   opacity: 1;
 }
 .checklicense-wrapper .save-btn {
-  position: fixed;
+  position: absolute;
   left: 0;
   right: 0;
-  bottom: 0;
+  bottom: 10px;
   width: 100%;
   height: 60px;
   background-color: rgba(255, 255, 255, 0.8);
@@ -5131,6 +5131,70 @@ body {
   background-color: #eb4452;
   width: 100%;
   height: 40px;
+}
+.myinsurance-wrapper .delete-box {
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10000;
+  background-color: rgba(33, 33, 33, 0.8);
+  font-size: 13px;
+  display: none;
+}
+.myinsurance-wrapper .delete-box .container {
+  text-align: center;
+  background-color: #fff;
+  border-radius: 8px;
+}
+.myinsurance-wrapper .delete-box .container .txt-box {
+  width: 240px;
+  height: 100px;
+  line-height: 100px;
+  color: #333333;
+  border-bottom: 1px solid #dfdfdf;
+}
+.myinsurance-wrapper .delete-box .container .select-box {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 240px;
+  height: 45px;
+  line-height: 45px;
+}
+.myinsurance-wrapper .delete-box .container .select-box .select {
+  -webkit-box-flex: 2;
+  -webkit-flex: 2;
+  -ms-flex: 2;
+  flex: 2;
+  width: 120px;
+}
+.myinsurance-wrapper .delete-box .container .select-box #yes > a {
+  display: inline-block;
+  color: #eb4452;
+  width: 120px;
+  height: 45px;
+}
+.myinsurance-wrapper .delete-box .container .select-box #no {
+  border-right: 1px solid #dfdfdf;
+  color: #8a8a8a;
+}
+.myinsurance-wrapper .delete-box.show {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  opacity: 1;
 }
 html,
 body {

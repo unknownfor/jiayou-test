@@ -116,4 +116,55 @@
       }
     }
   }
+  .delete-box {
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10000;
+    background-color: rgba(33, 33, 33, 0.8);
+    font-size: 13px;
+    display: none;
+    .container {
+      text-align: center;
+      background-color: #fff;
+      border-radius: 8px;
+      .txt-box {
+        width: 240px;
+        height: 100px;
+        line-height: 100px;
+        color: #333333;
+        border-bottom: 1px solid #dfdfdf;
+      }
+      .select-box {
+        display:flex;
+        width: 240px;
+        height: 45px;
+        line-height: 45px;
+        .select {
+          flex:2;
+          width: 120px;
+        }
+        #yes {
+          >a {
+            display:inline-block;
+            color: #eb4452;
+            .size(120px,45px);
+          }
+        }
+        #no {
+          border-right: 1px solid #dfdfdf;
+          color: #8a8a8a;
+        }
+      }
+
+    }
+    &.show {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 1;
+    }
+  }
 }
