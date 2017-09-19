@@ -12,7 +12,7 @@ define(['base','wx'],function (BaseClass,wx) {
     };
 
     myLicense.prototype=new BaseClass();
-    myLicense.constructor=Friend;
+    myLicense.constructor=myLicense;
 
     var pt=myLicense.prototype;
 
