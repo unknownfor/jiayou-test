@@ -9,6 +9,8 @@ define(['base','wx'],function (BaseClass,wx) {
 
         BaseClass.call(this,$wrapper);
 
+        this.getYearInfo();
+
         var that=this;
     };
 
@@ -20,7 +22,7 @@ define(['base','wx'],function (BaseClass,wx) {
 
     //http://xx.com/v2/car_series/{id}/year
     /*获取信息*/
-    pt.getEngineInfo=function(){
+    pt.getYearInfo=function(){
         this.ctrlLoadingIcon();
         // var param={},
         //     url='v2/car_series/{id}/year',
@@ -29,7 +31,7 @@ define(['base','wx'],function (BaseClass,wx) {
         //     };
         // this.getDataAsync(url,param,$.proxy(this,'getInfoSuccess'),options);
 
-        var url='../data/engine.json';
+        var url='../data/year.json';
         $.getJSON(url,null,$.proxy(this,'getInfoSuccess'));
     };
 
@@ -48,18 +50,17 @@ define(['base','wx'],function (BaseClass,wx) {
     };
 
 
-    /*车排量信息*/
     pt.showYearInfo=function(result){
         if(result.length==0){
             this.showTips({txt:'排量获取列表失败，'+result});
             return;
         }else{
-            var str=this.getEngineInfoStr(result);
+            var str=this.getYearInfoStr(result);
             $('.container').html(str);
         }
     };
 
-    pt.getEngineInfoStr=function(data){
+    pt.getYearInfoStr=function(data){
         var len=data.year_list.length,
             str='',
             item;
