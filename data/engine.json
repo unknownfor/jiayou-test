@@ -1,0 +1,33 @@
+{
+  "id": 13,
+  "branch_name": "奥迪",
+  "logo_img": "http://pic.hisihi.com/2016-05-19/1463654422491891.png",
+  "cs_id": 19,
+  "series_name": "奥迪A3",
+  "displacement_list": [
+    {
+      "dpid": 1,
+      "displacement_size": "1.0L"
+    },
+    {
+      "dpid": 2,
+      "displacement_size": "1.1L"
+    },
+    {
+      "dpid": 3,
+      "displacement_size": "1.2L"
+    },
+    {
+      "dpid": 4,
+      "displacement_size": "1.3L"
+    },
+    {
+      "dpid": 5,
+      "displacement_size": "1.4L"
+    },
+    {
+      "dpid": 6,
+      "displacement_size": "1.5L"
+    }
+  ]
+}

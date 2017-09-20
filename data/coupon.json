@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "type":1,
+    "cutAccount":8,
+    "minAccount":100,
+    "timeStart":"2017.06.05",
+    "timeEnd":"2017.08.05"
+  },
+  {
+    "id":2 ,
+    "type":1,
+    "cutAccount":5,
+    "minAccount":50,
+    "timeStart":"2017.06.05",
+    "timeEnd":"2017.08.05"
+  },
+  {
+    "id": 3,
+    "type":2,
+    "cutAccount":8,
+    "minAccount":150,
+    "timeStart":"2017.06.05",
+    "timeEnd":"2017.08.05"
+  },
+  {
+    "id": 4,
+    "type":3,
+    "cutAccount":7.5,
+    "minAccount":100,
+    "timeStart":"2017.06.05",
+    "timeEnd":"2017.08.05"
+  },
+  {
+    "id": 5,
+    "type":4,
+    "cutAccount":10,
+    "minAccount":150,
+    "timeStart":"2017.06.05",
+    "timeEnd":"2017.08.05"
+  },
+  {
+    "id": 6,
+    "type":5,
+    "cutAccount":10,
+    "minAccount":150,
+    "timeStart":"2017.06.05",
+    "timeEnd":"2017.08.05"
+  },
+  {
+    "id": 7,
+    "type":6,
+    "cutAccount":10,
+    "minAccount":150,
+    "timeStart":"2017.06.05",
+    "timeEnd":"2017.08.05"
+  },
+  {
+    "id": 8,
+    "type":7,
+    "cutAccount":10,
+    "minAccount":150,
+    "timeStart":"2017.06.05",
+    "timeEnd":"2017.08.05"
+  }
+]

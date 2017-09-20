@@ -1,0 +1,37 @@
+{
+  "id": 13,
+  "branch_name": "奥迪",
+  "logo_img": "奥迪.png",
+  "cs_id": 19,
+  "series_name": "奥迪A3",
+  "year_list": [
+    {
+      "cyid": 1,
+      "year": 1998
+    },
+    {
+      "cyid": 1,
+      "year": 1999
+    },
+    {
+      "cyid": 1,
+      "year": 1990
+    },
+    {
+      "cyid": 1,
+      "year": 1992
+    },
+    {
+      "cyid": 1,
+      "year": 1991
+    },
+    {
+      "cyid": 1,
+      "year": 1993
+    },
+    {
+      "cyid": 1,
+      "year": 1996
+    }
+  ]
+}

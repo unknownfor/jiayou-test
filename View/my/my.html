@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <title>加油赞{$title}</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="Resource-type" content="Document">
+    <!--禁止缩放-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <!--禁止数字识别为手机号-->
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta http-equiv="Cache" content="no-cache">
+    <link href="__STYLE__/iconfont/iconfont.css" rel="stylesheet" type="text/css">
+    <link href="__STYLE__/css/index.css" rel="stylesheet" type="text/css">
+    <script>
+        window.urlObject= {
+            js: "__JS__",
+            css: "__STYLE__",
+            image: "__IMG__",
+            json: "__JSON__",
+            ctrl:'__CTRL__',
+            apiUrl:'__API__',
+            appid:'__WX_AppID__',
+            redirectUrl:'__WX_RedirectUrl__',
+        };
+    </script>
+</head>
+<body>
+    <div class="wrapper my-wrapper" >
+        <div class="basic-info-box">
+            <div class="wx-info-box">
+                <div class="wx-info-main">
+                    <a class="name-avatar-box" href="__CTRL__/myinfo">
+                        <img class="avatar" src=""/>
+                        <div class="wx-info-content">
+                            <div class="nick-name"></div>
+                            <div class="mobile"></div>
+                        </div>
+                        <span class="iconfont icon-right"></span>
+                    </a>
+                </div>
+                <img class="filter-img" src=""/>
+            </div>
+            <div class="total-consumption-info-box">
+                <div class="border">
+                    <div class="val">****</div>
+                    <div class="key">累计加油量</div>
+                </div>
+                <div class="border">
+                    <div class="val">****</div>
+                    <div class="key">累计消费金额</div>
+                </div>
+                <div>
+                    <div class="val">****</div>
+                    <div class="key">累计节省金额</div>
+                </div>
+            </div>
+        </div>
+        <div class="other-info-box">
+            <div class="my-other-info-box">
+                <a class="car-item margin" href="__CTRL__/mycar">
+                    <div class="icon-car">
+                        <img src="__IMG__/my/car.jpg" />
+                    </div>
+                    <div class="info-box">
+                        <div class="car-number">鄂A30070</div>
+                        <div class="car-detail"><span>丰田 锐志 2013款3.0V 尊锐导航版</span></div>
+                    </div>
+                    <span class="iconfont icon-right"></span>
+                </a>
+
+                <a class="info-item border" href="__CTRL__/orderlist">
+                    <div class="icon-box">
+                        <img src="__IMG__/my/order.png">
+                    </div>
+                    <div class="title-box">我的订单</div>
+                    <span class="iconfont icon-right"></span>
+                </a>
+                <a href="__CTRL__/mycoupon" class="info-item border">
+                    <div class="icon-box">
+                        <img src="__IMG__/my/redpack.png">
+                    </div>
+                    <div class="title-box">我的红包</div>
+                    <span class="iconfont icon-right"></span>
+                </a>
+                <a class="info-item border" href="__CTRL__/invitation">
+                    <div class="icon-box">
+                        <img class="invitation-icon" src="__IMG__/my/invitation.png">
+                    </div>
+                    <div class="title-box">我的邀请</div>
+                    <span class="iconfont icon-right"></span>
+                </a>
+                <a class="info-item" href="__CTRL__/mycollect">
+                    <div class="icon-box star">
+                        <img class="invitation-icon" src="__IMG__/my/mycollect.png">
+                    </div>
+                    <div class="title-box">我的收藏</div>
+                    <span class="iconfont icon-right"></span>
+                </a>
+                <a class="info-item margin" href="">
+                    <div class="icon-box">
+                        <img class="bind-icon" src="__IMG__/my/bindmobile.png">
+                    </div>
+                    <div class="title-box" id="mobile-tips"></div>
+                    <span class="iconfont icon-right"></span>
+                </a>
+            </div>
+        </div>
+        <div class="building-box">
+            <img src="__IMG__/my/building.png">
+            <span>APP努力开发中，敬请期待…</span>
+        </div>
+    </div>
+    <include file="Public:menu" />
+    <div class="loding-modal">
+        <i id="imgLoadingCircle" class="loadingCircle active"></i>
+        <div>加载中…</div>
+    </div>
+<!--<script data-main="__JS__/app/main/my" src="__JS__/libs/require.js" type="text/javascript"></script>-->
+<script data-main="../Javascript/app/main/my" src="../Javascript/libs/require.js" type="text/javascript"></script>
+</body>
+</html>

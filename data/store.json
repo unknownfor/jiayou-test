@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "title":"武汉测试加油赞",
+    "address":"武汉市洪山区南湖大道123号",
+    "distance":"00.00km",
+    "navigation":"http://apis.map.qq.com/uri/v1/marker?marker=coord:30.573170,114.236760;title:中石油福源加油站;addr:湖北省武汉市江硚口区沿河大道349号附1号&referer=WeChat"
+  },
+  {
+    "id": 2,
+    "title":"武汉中南加油站",
+    "address":"武汉市洪山区中南2路13号",
+    "distance":"11.00km",
+    "navigation":"http://apis.map.qq.com/uri/v1/marker?marker=coord:30.573170,114.236760;title:中石油福源加油站;addr:湖北省武汉市江硚口区沿河大道349号附1号&referer=WeChat"
+  },
+  {
+    "id": 3,
+    "title":"武汉鲁巷加油赞",
+    "address":"武汉市洪山区珞瑜路4323号",
+    "distance":"10.00km",
+    "navigation":"http://apis.map.qq.com/uri/v1/marker?marker=coord:30.573170,114.236760;title:中石油福源加油站;addr:湖北省武汉市江硚口区沿河大道349号附1号&referer=WeChat"
+  },
+  {
+    "id": 4,
+    "title":"武汉关山大道加油赞",
+    "address":"武汉市洪山区关山大道1号",
+    "distance":"10.00km",
+    "navigation":"http://apis.map.qq.com/uri/v1/marker?marker=coord:30.573170,114.236760;title:中石油福源加油站;addr:湖北省武汉市江硚口区沿河大道349号附1号&referer=WeChat"
+  }
+]

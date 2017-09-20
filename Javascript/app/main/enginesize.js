@@ -14,7 +14,6 @@ requirejs.config({
         // wxconfig:'app/model/wxconfig',
         // super:'app/model/super',
         // base:'app/model/base',
-        // myslider:'app/model/myslider',
         // ccarinfo:'app/controller/c-carinfo'
         $:'../../libs/zepto.min',
         touch:'../../libs/zepto.event.touch',
@@ -24,7 +23,6 @@ requirejs.config({
         wxconfig:'../model/wxconfig',
         super:'../model/super',
         base:'../model/base',
-        myslider:'../model/myslider',
         cenginesize:'../controller/c-enginesize'
     },
     shim: {
