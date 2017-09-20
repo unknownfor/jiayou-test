@@ -30,7 +30,6 @@ define(['base','wx'],function (BaseClass,wx) {
         //         errorCallback:$.proxy(this,'getInfoError')
         //     };
         // this.getDataAsync(url,param,$.proxy(this,'getInfoSuccess'),options);
-
         var url='../data/year.json';
         $.getJSON(url,null,$.proxy(this,'getInfoSuccess'));
     };

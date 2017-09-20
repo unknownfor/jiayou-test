@@ -1,0 +1,41 @@
+{
+  "id": 13,
+  "branch_name": "奥迪",
+  "logo_img": "奥迪.png",
+  "cs_id": 19,
+  "series_name": "奥迪A3",
+  "motorcycle_type_list": [
+    {
+      "mtid": 1,
+      "motorcycle_type": "自动档"
+    },
+    {
+      "mtid": 1,
+      "motorcycle_type": "随便档案"
+    },
+    {
+      "mtid": 1,
+      "motorcycle_type": "自动档"
+    },
+    {
+      "mtid": 1,
+      "motorcycle_type": "自动档"
+    },
+    {
+      "mtid": 1,
+      "motorcycle_type": "手动档"
+    },
+    {
+      "mtid": 1,
+      "motorcycle_type": "自动档"
+    },
+    {
+      "mtid": 1,
+      "motorcycle_type": "自动档"
+    },
+    {
+      "mtid": 1,
+      "motorcycle_type": "脚踩档案就上路"
+    }
+  ]
+}

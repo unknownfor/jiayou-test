@@ -1,0 +1,44 @@
+{
+  "id": 2,
+  "api_id": 117,
+  "branch_name": "AC Schnitzer",
+  "logo_img": "AC Schnitzer.png",
+  "series_list": [
+    {
+      "seid": 532,
+      "series_name": "宝利格"
+    },
+    {
+      "seid": 536,
+      "series_name": "华泰B11"
+    },
+    {
+      "seid": 536,
+      "series_name": "华泰B11"
+    },
+    {
+      "seid": 532,
+      "series_name": "宝利格"
+    },
+    {
+      "seid": 536,
+      "series_name": "华泰B11"
+    },
+    {
+      "seid": 536,
+      "series_name": "华泰B11"
+    },
+    {
+      "seid": 532,
+      "series_name": "宝利格"
+    },
+    {
+      "seid": 536,
+      "series_name": "华泰B11"
+    },
+    {
+      "seid": 536,
+      "series_name": "华泰B11"
+    }
+  ]
+}
