@@ -12,3 +12,10 @@
     "contact_number": "95519"
   }
 }
+//没有车险
+//{
+//  "is_insure": 0,
+//  "member_car_insurance": {
+//    "id": 2,
+//  }
+//}

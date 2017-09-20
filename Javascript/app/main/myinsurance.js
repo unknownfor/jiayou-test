@@ -23,7 +23,6 @@ requirejs.config({
         wxconfig:'../model/wxconfig',
         super:'../model/super',
         base:'../model/base',
-        myslider:'../model/myslider',
         cmyinsurance:'../controller/c-myinsurance'
     },
     shim: {
