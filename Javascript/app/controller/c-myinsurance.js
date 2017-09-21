@@ -33,7 +33,7 @@ define(['base','wx'],function (BaseClass,wx) {
         var url='../data/myinsurance.json';
         $.getJSON(url,null,$.proxy(this,'getInfoSuccess'));
     };
-    
+
     pt.getInfoError=function(result){
         this.ctrlLoadingIcon(false);
         this.showTips({txt:'信息加载失败，'+result});
@@ -114,15 +114,23 @@ define(['base','wx'],function (BaseClass,wx) {
 
 
     //保存车险数据,提交数据‘保险公司名称’‘车牌号’‘车型号’ ‘联系电话’ ‘投保时间’
+
+
+
+
+
+
+
     //删除车险数据
 
 
 
     pt.showInsuranceComInfo=function(data) {
-        var len=data.length, str='', item;
+        var len=data.length, str='', url,item;
         if(len != 0 || data != null){
             if (data.is_insure == 1){
                 item= data.member_car_insurance;
+                url=window.urlObject.ctrl+'/insurance';
                 str='<div class="item-box">'+
                     this.getPhoneInfo(data)+
                     '<div class="info-box">'+
@@ -132,7 +140,7 @@ define(['base','wx'],function (BaseClass,wx) {
                     '</div>'+
                     '</div>'+
                     '<div class="save-btn">'+
-                    '<a href="__CTRL__/insurance"><span>保存</span></a>'+
+                    '<a href="'+url+'"><span>保存</span></a>'+
                     '</div>';
             }
         }

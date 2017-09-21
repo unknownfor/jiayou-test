@@ -23,12 +23,16 @@ define(['base', 'wx'], function (BaseClass,wx) {
         /*关闭*/
         $(document).on(this.eventName,'.confirm',$.proxy(that,'hideTipBox'));
 
-        //点击加载更多
+        //点击展示全部
         $(document).on(this.eventName,'.load-more',function() {
             //页面恢复滚动
             that.scrollControl(true);
             pt.showOrgInfo();
         });
+
+        //跳转排量选择页面
+        $(document).on(this.eventName,'.order-btn',$.proxy(this,'chooseEngineSize'));
+
     };
 
 
@@ -54,6 +58,19 @@ define(['base', 'wx'], function (BaseClass,wx) {
         title.removeClass('none');
         btn.addClass('none');
     };
+
+    /*结算*/
+    // pt.chooseEngineSize=function(){
+    //     var type=$('#gas-type').text().replace('#',''),  //去除 ＃
+    //         amount=$('#amount-input').val();
+    //     //跳转订单页面
+    //     var url=window.urlObject.ctrl+'/order?'+
+    //         'gun_id='+$('#gun-input').attr('data-id')+
+    //         '&gun_sn='+$('#gun-input').attr('data-sn')+
+    //         '&type='+type+
+    //         '&amount='+amount;
+    //     window.location.href=url;
+    // };
 
 
     return CarInfo;

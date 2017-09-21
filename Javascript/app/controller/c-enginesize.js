@@ -64,10 +64,12 @@ define(['base','wx'],function (BaseClass,wx) {
     pt.getEngineInfoStr=function(data){
         var len=data.displacement_list.length,
             str='',
+            url,
             item;
         for(var i=0;i<len;i++){
             item=data.displacement_list[i];
-            str+= '<a class="container-box border" href="__CTRL__/caryear">'+
+            url=window.urlObject.ctrl+'/caryear/id/';
+            str+= '<a class="container-box border" href="'+url+item.dpid+'">'+
                 '<div class="item">'+item.displacement_size+'</div>'+
                 '<span class="iconfont icon-right"></span>'+
                 '</a>';
@@ -78,14 +80,16 @@ define(['base','wx'],function (BaseClass,wx) {
     /*车辆信息数据*/
     pt.showCarInfo=function(data){
         var str='',item;
-        if(data != null) {
+        if(data != null || data.logo_img =='undefined') {
             item=data;
-            str ='<div class="head-img">'+
+            str ='<div class="head-box">'+
+                '<div class="head-img">'+
                 '<img id="img" src="'+item.logo_img+'" />'+
                 '</div>'+
-                '<div class="head-txt">'+item.branch_name+'&nbsp&nbsp'+item.series_name+'</div>';
+                '<div class="head-txt">'+item.branch_name+'&nbsp&nbsp'+item.series_name+'</div>'+
+                '</div>';
         }
-        $('.head-box').html(str);
+        $('.container').before(str);
     };
 
 
