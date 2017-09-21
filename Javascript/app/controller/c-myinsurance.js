@@ -11,12 +11,6 @@ define(['base','wx'],function (BaseClass,wx) {
         this.getMyInsuranceInfo();
 
         var that=this;
-
-        $(document).on(this.eventName,'.delete',$.proxy(this,'showTipBox'));
-
-        $(document).on(this.eventName,'#no',$.proxy(that,'hideTipBox'));
-
-
     };
 
     myInsurance.prototype=new BaseClass();
@@ -25,29 +19,21 @@ define(['base','wx'],function (BaseClass,wx) {
     var pt=myInsurance.prototype;
 
 
-    //http://xx.com/v2/member_car_insurances/{id}
-    /*获取信息*/
-    pt.getMyInsuranceInfo=function(){
-        this.ctrlLoadingIcon();
 
+    pt.getMyInsuranceInfo=function() {
         var url='../data/myinsurance.json';
-        $.getJSON(url,null,$.proxy(this,'test'));
+        $.getJSON(url,null,$.proxy(this,'getInfoSuccess'));
     };
 
 
-    /*获取成功*/
-    pt.test=function(data){
-        alert('test');
+
+    pt.getInfoSuccess=function(data) {
+        window.console = window.console || {};
+        console.log || (console.log = opera.postError);
     };
 
-
-    pt.showTipBox=function(){
-        $('.delete-box').addClass('show');
-    };
-    pt.hideTipBox=function(){
-        $('.delete-box').removeClass('show');
-    };
 
 
     return myInsurance;
+
 });
