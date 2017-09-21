@@ -67,10 +67,13 @@ define(['base', 'wx'], function (BaseClass, wx) {
         for(var i=0;i<len;i++){
             item=data.series_list[i];
             url=window.urlObject.ctrl+'/carinfo/id/';
-            str+= '<a class="container-box border" href="'+url+item.seid+'">'+
-                '<div class="item">'+item.series_name+'</div>'+
-                '<span class="iconfont icon-right"></span>'+
-                '</a>';
+            name=item.series_name;
+            if( name != '' || name != 'undefined') {
+                str+= '<a class="container-box border" href="'+url+item.seid+'">'+
+                    '<div class="item">'+name+'</div>'+
+                    '<span class="iconfont icon-right"></span>'+
+                    '</a>';
+            }
         }
         return str;
     };
