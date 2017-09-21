@@ -2,13 +2,13 @@
   "is_insure": 1,
   "member_car_insurance": {
     "id": 1,
-    "branch_name": "奥迪",
-    "series_name": "",
-    "license_plate": "",
+    "branch_name": "劳斯莱斯幻影",
+    "series_name": "劳斯莱斯",
+    "license_plate": "鄂AABBCC",
     "ic_id": 1,
     "last_insured_time": "0000-00-00",
     "company_name": "中国人寿财险",
-    "company_logo": "",
+    "company_logo": "http://pic.hisihi.com/2016-05-19/1463654422491891.png",
     "contact_number": "95519"
   }
 }

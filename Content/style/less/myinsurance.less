@@ -7,7 +7,7 @@
     color: #ffffff;
     .head-bg {
       display: inline-block;
-      max-height: @h;
+      height: @h;
       width: 100%;
       opacity: 0.5;
       z-index: 4;
@@ -34,10 +34,9 @@
         width: 100%;
         margin-top: 5px;
         .head-info {
-          padding-left: 8px;
-          &.left {
-            padding: 0 8px 0 0;
-            border-right: 1px solid #fff;
+          &.right {
+            padding-left: 8px;
+            border-left: 1px solid #fff;
           }
         }
       }
