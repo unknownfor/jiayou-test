@@ -59,18 +59,9 @@ define(['base', 'wx'], function (BaseClass,wx) {
         btn.addClass('none');
     };
 
-    /*结算*/
-    // pt.chooseEngineSize=function(){
-    //     var type=$('#gas-type').text().replace('#',''),  //去除 ＃
-    //         amount=$('#amount-input').val();
-    //     //跳转订单页面
-    //     var url=window.urlObject.ctrl+'/order?'+
-    //         'gun_id='+$('#gun-input').attr('data-id')+
-    //         '&gun_sn='+$('#gun-input').attr('data-sn')+
-    //         '&type='+type+
-    //         '&amount='+amount;
-    //     window.location.href=url;
-    // };
+
+    //调用日期选择接口
+
 
 
     return CarInfo;
