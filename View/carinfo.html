@@ -26,47 +26,44 @@
 >
     <div class="info-item border">
         <div class="title-input">车牌号码：</div>
-        <input class="car-input" placeholder="请输入车牌号"/>
+        <input class="car-input license-plate" placeholder="请输入车牌号" value="鄂A123456"/>
         <a class="license-add" href="__CTRL__/carlicense" ><span class="add-box"><span class="add-img"></span></span></a>
     </div>
 
     <div class="title none">爱车保养需要完善以下信息（选填）</div>
     <div class="info-item border none">
         <div class="title-box">上路时间：</div>
-        <!--<div id="date-select" class="hide-form">-->
-            <!---->
-        <!--</div>-->
-        <div id="select" class="">
-            <input type="text" id="picktime" value="" readonly />
+        <div class="date-select">
+            <input type="text" id="picktime" />
         </div>
         <span class="iconfont icon-right"></span>
     </div>
     <div class="info-item none">
         <div class="title-input">行驶里程：</div>
-        <input class="car-input right" placeholder="请输入当前里程数" type="number"/>
+        <input class="car-input right trip-distance" placeholder="请输入当前里程数" type="number"/>
         <span>km</span>
     </div>
 
     <div class="title none">违章需完善以下信息（选填）</div>
     <div class="info-item border none">
         <div class="title-input">查询城市：</div>
-        <input class="car-input" />
+        <input class="car-input city" />
         <span class="iconfont icon-right"></span>
     </div>
     <div class="info-item border none">
         <div class="title-box">车架号：</div>
-        <input class="car-input right" placeholder="请输入完整的车架号"/>
+        <input class="car-input frame-number right" placeholder="请输入完整的车架号"/>
         <span class="icon-help"></span>
     </div>
     <div class="info-item none">
         <div class="title-input">发动机号：</div>
-        <input class="car-input right" placeholder="请输入完整的发动机号"/>
+        <input class="car-input engine-number right" placeholder="请输入完整的发动机号"/>
         <span class="icon-help"></span>
     </div>
 
     <div class="info-item margin none">
         <div class="title-input">注册时间：</div>
-        <input class="car-input right" placeholder="用于提醒年检"/>
+        <input class="car-input registration-timeright" placeholder="用于提醒年检"/>
         <span class="iconfont icon-right"></span>
     </div>
 
