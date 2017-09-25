@@ -5,14 +5,19 @@
 
 
 define(['base', 'wx'], function (BaseClass,wx) {
+
+
     function CarInfo($wrapper) {
         BaseClass.call(this, $wrapper);
+
 
         var that=this;
         //禁止页面滚动
         that.scrollControl(false);
 
         $(document).on(this.eventName,'.icon-help',$.proxy(this,'showTipBox'));
+
+        //点击按钮变色
 
         /*点击灰色部分关闭*/
         $(document).on(this.eventName,'.help-box',function(e){
@@ -61,7 +66,6 @@ define(['base', 'wx'], function (BaseClass,wx) {
 
 
     //调用日期选择接口
-
 
 
     return CarInfo;

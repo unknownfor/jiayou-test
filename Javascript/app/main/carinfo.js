@@ -23,12 +23,14 @@ requirejs.config({
         wxconfig:'../model/wxconfig',
         super:'../model/super',
         base:'../model/base',
-        myslider:'../model/myslider',
+        city:'../model/LArea.min',
+        cityD:'../model/LAreaData1',
         ccarinfo:'../controller/c-carinfo'
     },
     shim: {
         fastclick: {
             output: 'fastclick'
+
         }
     }
 })

@@ -5,7 +5,7 @@
 
 
 define(['base', 'wx'], function (BaseClass,wx) {
-    function MyLicense($wrapper) {
+    function checkLicense($wrapper) {
         BaseClass.call(this, $wrapper);
 
         var that=this;
@@ -33,10 +33,10 @@ define(['base', 'wx'], function (BaseClass,wx) {
     };
 
 
-    MyLicense.prototype = new BaseClass();
-    MyLicense.constructor = MyLicense;
+    checkLicense.prototype = new BaseClass();
+    checkLicense.constructor = checkLicense;
 
-    var pt = MyLicense.prototype;
+    var pt = checkLicense.prototype;
 
 
     pt.showJiaTipBox=function(){
@@ -61,5 +61,5 @@ define(['base', 'wx'], function (BaseClass,wx) {
     };
 
 
-    return MyLicense;
+    return checkLicense;
 });
