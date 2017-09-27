@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-
 <head>
     <title>加油赞{$title}添加行驶证</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -23,20 +22,23 @@
     <div class="container">
         <div class="container-box">
             <form class="license-box">
-                <input class="loadImgBtn" type="file" name="image" size="28" accept="image/*">
+                <input class="loadImgBtn" id="front" type="file" name="image" size="28" accept="image/*">
             </form>
-            <img class="license-img" src="" />
-            <img class="uploadImg" src="../Content/images/mycar/takephoto.png" />
-            <div class="description">拍摄行驶证主页</div>
+            <div class="box-front-info">
+                <img class="uploadImg" src="../Content/images/mycar/takephoto.png" />
+                <div class="description">拍摄行驶证主页</div>
+            </div>
         </div>
     </div>
     <div class="container last-child">
         <div class="container-box">
             <form class="license-box">
-                <input class="loadImgBtn" type="file" name="image" size="28" accept="image/*">
+                <input class="loadImgBtn" id="back" type="file" name="image" size="28" accept="image/*">
             </form>
-            <img class="uploadImg" src="../Content/images/mycar/takephoto.png" />
-            <div class="description">拍摄行驶证副驾驶页</div>
+            <div class="box-back-info">
+                <img class="uploadImg"  src="../Content/images/mycar/takephoto.png" />
+                <div class="description">拍摄行驶证副驾驶页</div>
+            </div>
         </div>
     </div>
     <div class="cover-box" id="carlicense-cover-box"></div>
@@ -53,6 +55,6 @@
         redirectUrl:'__WX_RedirectUrl__',
     };
 </script>
-<script data-main="../Javascript/app/main/carinfo" src="../Javascript/libs/require.js" type="text/javascript"></script>
+<script data-main="../Javascript/app/main/carlicense" src="../Javascript/libs/require.js" type="text/javascript"></script>
 <!--<script type="application/javascript" src="../Javascript/app/controller/c-carinfo.js" />-->
 </body>

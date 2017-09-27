@@ -370,14 +370,12 @@ define(['super'], function (Super) {
         if (r != null) return (r[2]); return null;
     }
 
-   /*
-   * 日期公共方法
-   *格式 yyyy-mm-dd
-   *
-   * */
 
 
-
+    /*隐藏遮盖蒙板*/
+    pt.hideCoverBox=function(){
+        $('#cover-box').hide();
+    }
 
     return BaseClass;
 });

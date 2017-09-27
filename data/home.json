@@ -1,0 +1,33 @@
+[
+  {
+  "member_car_list": [
+    {
+      "id": 2,
+      "branch_name": "奥迪",
+      "series_name": "A6",
+      "license_plate": "鄂A12345",
+      "logo_img":"http://img.hb.aicdn.com/f503d1c0d7e8093e85f2941144581cfce3b9590ffae5-QruYHW_fw658"
+    },
+    {
+      "id": 3,
+      "branch_name": "奥迪",
+      "series_name": "",
+      "license_plate": "",
+      "logo_img":""
+    }
+  ],
+  "member_car_insurance_list": {
+    "0": {
+      "id": 2,
+      "company_name": "中国人寿财险",
+      "company_logo": "",
+      "expiration_time": "2017年09月07日"
+    }
+  },
+  "member_driving_licence":{
+    "id":6,
+    "expiry_time":"2017年08月09日",
+    "accumulative_points":0
+  }
+  }
+]
