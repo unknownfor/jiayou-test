@@ -5096,8 +5096,8 @@ body {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  text-align: justify
-        color: #333333;
+  text-align: justify;
+  color: #333333;
 }
 .mylicense-wrapper .info-box .info-item .info-right {
   -webkit-box-flex: 1;
@@ -5603,9 +5603,9 @@ body {
   left: 7px;
 }
 .homev2_5-wrapper .item-box {
-  padding: 15px 20px;
+  padding: 10px 20px;
   width: 100%;
-  height: 121px;
+  height: auto;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5634,9 +5634,9 @@ body {
   color: #333333;
 }
 .homev2_5-wrapper .item-box .item .item-img > img {
-  width: 65px;
-  height: 65px;
-  border-radius: 65px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
 }
 .homev2_5-wrapper .item-box .item .item-title {
   margin-top: 6px;
@@ -5777,16 +5777,6 @@ body {
 .homev2_5-wrapper .hide {
   opacity: 0;
   display: none;
-}
-html,
-body {
-  background-color: #f5f5f5;
-  margin: 0 auto;
-  padding: 0;
-  max-width: 700px;
-  overflow-x: hidden;
-  word-wrap: break-word;
-  position: relative;
 }
 #menu-wrapper {
   height: 50px;
