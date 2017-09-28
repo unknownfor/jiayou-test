@@ -1,0 +1,78 @@
+[
+
+  {
+    "id": 1,
+    "type":1,
+    "title":"3新用户100%领88元券，更赢超值5折加油券",
+    "img_logo":"http://img.hb.aicdn.com/69c0cb089434a13c01f893bcdbc2b2e47298d81523285-umDcoY_fw236",
+    "timeStart":"2017.06.05",
+    "timeEnd":"2017.08.05",
+    "title_list":[
+      {
+        "did": 1,
+        "mainTitle": "领取5折加油券",
+        "secondTitle": ""
+      },
+      {
+        "did": 2,
+        "mainTitle": "第一标题",
+        "secondTitle": ""
+      },
+      {
+        "did": 3,
+        "mainTitle": "",
+        "secondTitle": "第二标题"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "type":1,
+    "title":"3新用户100%领88元券，更赢超值5折加油券",
+    "img_logo":"http://img.hb.aicdn.com/1c8078f968640c9b4bb8cc61c4d671eec53317f89ed82-qPmNK6_fw236",
+    "timeStart":"2017.06.05",
+    "timeEnd":"2017.08.05",
+    "title_list":[
+      {
+        "did": 1,
+        "mainTitle": "领取5折加油券",
+        "secondTitle": ""
+      },
+      {
+        "did": 2,
+        "mainTitle": "第一标题",
+        "secondTitle": ""
+      },
+      {
+        "did": 3,
+        "mainTitle": "",
+        "secondTitle": "第二标题"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "type":1,
+    "title":"3新用户100%领88元券，更赢超值5折加油券",
+    "img_logo":"http://img.hb.aicdn.com/10742ee2cd7d4576760fdd8062dc3bb88510e7641cffe-u3AMvg_fw236",
+    "timeStart":"2017.06.05",
+    "timeEnd":"2017.08.05",
+    "title_list":[
+      {
+        "did": 1,
+        "mainTitle": "领取5折加油券",
+        "secondTitle": ""
+      },
+      {
+        "did": 2,
+        "mainTitle": "第一标题",
+        "secondTitle": ""
+      },
+      {
+        "did": 3,
+        "mainTitle": "",
+        "secondTitle": "第二标题"
+      }
+    ]
+  }
+]
