@@ -3,6 +3,7 @@
  * Created by mayoi on 2017/09/27.
  */
 
+//获得token，取得数据
 
 define(['base','wx','wxconfig'],function (BaseClass,wx,WxConfig) {
     function Home($wrapper) {
