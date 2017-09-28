@@ -2,7 +2,6 @@
  * Created by mayoi on 2017/09/28.
  */
 //活动
-
 define(['base','wx'],function (BaseClass,wx) {
     function activity($wrapper) {
 
@@ -35,6 +34,8 @@ define(['base','wx'],function (BaseClass,wx) {
     /*获取成功*/
     pt.getInfoSuccess=function(data){
         this.ctrlLoadingIcon(false);
+        $('.activity2_5-wrapper').show();
+        this.hideCoverBox();// 隐藏菜单蒙板，
         this.showActivityInfo(data);
     };
 
@@ -53,8 +54,9 @@ define(['base','wx'],function (BaseClass,wx) {
                 item=data[i];
                 str += '<div class="activity-box">' +
                     '<div class="time-box">' +
-                    '<span class="date">'+ item.timeStart +'</span>' +
-                    '<span>'+item.timeEnd +'</span>' +
+                    '<span class="date">'+
+                    this.getTimeFromTimestamp( item.timeStart,'yyyy-MM-dd hh:mm')+
+                    '</span>' +
                     '</div>' +
                     '<a class="item-box" href=" '+ url +'   '+item.id+'">' +
                     '<div class="info-banner">' +
