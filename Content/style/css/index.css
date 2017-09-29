@@ -5892,6 +5892,88 @@ body {
 .activity2_5-wrapper .activity-box:last-child {
   margin-bottom: 35px;
 }
+.privilege-wrapper {
+  max-width: 700px;
+  margin: 0 auto;
+  position: relative;
+  background-color: #F2F2F2;
+}
+.privilege-wrapper .hide {
+  opacity: 0;
+  display: none;
+}
+.privilege-wrapper .info-item {
+  text-align: center;
+}
+.privilege-wrapper .info-item .info-head {
+  position: relative;
+  height: 200px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#151515), to(#474d50));
+  background-image: -webkit-linear-gradient(top, #151515, #474d50);
+  background-image: linear-gradient(to bottom, #151515, #474d50);
+}
+.privilege-wrapper .info-item .info-bg {
+  border: none;
+  width: 88%;
+  position: absolute;
+  top: 100px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  -webkit-box-shadow: 0 2px 4px 0 #e2e2e2;
+  box-shadow: 0 2px 4px 0 #e2e2e2;
+  border-radius: 6px;
+}
+.privilege-wrapper .info-item .info-container {
+  background-color: #ffffff;
+  position: relative;
+  top: 115px;
+  padding-top: 15px;
+  text-align: center;
+}
+.privilege-wrapper .info-item .info-container .info-title {
+  margin-bottom: 15px;
+}
+.privilege-wrapper .info-item .info-container .info-title .line {
+  display: inline-block;
+  width: 35px;
+  height: 1px;
+  border-top: 1px solid #333333;
+}
+.privilege-wrapper .info-item .info-container .info-title .txt {
+  margin: 0 8px;
+}
+.privilege-wrapper .info-item .info-container .item-box > li {
+  margin: 0 15px 15px 15px;
+}
+.privilege-wrapper .info-item .info-container .item-box > li > img {
+  width: 100%;
+}
+.privilege-wrapper .info-item .info-container .join-btn {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 45px;
+  text-align: center;
+}
+.privilege-wrapper .info-item .info-container .join-btn > a {
+  width: 100%;
+  height: 45px;
+  display: inline-block;
+}
+.privilege-wrapper .info-item .info-container .join-btn > a > div {
+  display: inline-block;
+  color: #fff;
+  line-height: 45px;
+  background-color: #eb4452;
+  width: 92%;
+  height: 45px;
+  border-radius: 5px;
+}
+@media screen and (max-width: 320px) {
+  .privilege-wrapper .info-item .info-container {
+    top: 70px;
+  }
+}
 #menu-wrapper {
   height: 50px;
   background-color: #fff;
