@@ -107,5 +107,6 @@ define(['base','wx'],function (BaseClass,wx) {
 
 
 
+
     return Privilege;
 });

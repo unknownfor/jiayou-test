@@ -1,0 +1,58 @@
+.buyPrivilege-wrapper {
+  color: #333333;
+  font-size: 13px;
+  position: relative;
+  height: 100%;
+  background-color: #F2F2F2;
+  .hide {
+    display: none;
+    opacity: 0;
+    opacity: 0;
+  }
+  .info-item {
+    background-color: #fff;
+    .size(100%,45px);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 15px;
+    box-sizing: border-box;
+    text-decoration: none;
+    justify-content: space-between;
+    position: relative;
+    .title {
+      flex:2;
+      text-align: left;
+    }
+    .info {
+      flex: 2;
+      text-align: right;
+      color: #8a8a8a;
+    }
+    &.border {
+      border-bottom: 1px solid #dfdfdf;
+    }
+    &:first-child {
+      margin-top: 15px;
+    }
+  }
+  .buy-btn {
+    @h:45px;
+    display: inline-block;
+    width: 100%;
+    margin-top: 25px;
+    text-align: center;
+    > a {
+      .size(100%,@h);
+      display: inline-block;
+      > span {
+        display: inline-block;
+        color: #fff;
+        line-height: 45px;
+        background-color: #eb4452;
+        .size(94%,@h);
+        border-radius: 5px;
+      }
+    }
+  }
+}
