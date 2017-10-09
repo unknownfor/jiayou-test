@@ -6125,6 +6125,88 @@ body {
   height: 45px;
   border-radius: 5px;
 }
+.buySuccess-wrapper {
+  color: #333333;
+  font-size: 13px;
+  position: relative;
+  height: 100%;
+  background-color: #F2F2F2;
+  padding-top: 25px;
+}
+.buySuccess-wrapper .head-box {
+  background-color: #ffffff;
+  margin: 0 25px 25px 25px;
+  height: 140px;
+  border-radius: 8px;
+  font-size: 16px;
+  color: #333333;
+}
+.buySuccess-wrapper .head-box .head-img {
+  padding-top: 30px;
+  padding-bottom: 10px;
+}
+.buySuccess-wrapper .head-box .head-img > img {
+  width: 45px;
+  height: 45px;
+}
+.buySuccess-wrapper .head-box > div {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.buySuccess-wrapper .item-box {
+  background-color: #fff;
+  width: 100%;
+  height: 45px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0 15px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  text-decoration: none;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  position: relative;
+}
+.buySuccess-wrapper .item-box .item-info {
+  color: #8a8a8a;
+}
+.buySuccess-wrapper .item-box.border {
+  border-bottom: 1px solid #dfdfdf;
+}
+.buySuccess-wrapper .item-box.margin {
+  margin-bottom: 10px;
+}
+.buySuccess-wrapper .item-box.color {
+  color: #8a8a8a;
+}
+.buySuccess-wrapper.hide {
+  display: none;
+  opacity: 0;
+}
 #menu-wrapper {
   height: 50px;
   background-color: #fff;

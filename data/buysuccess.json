@@ -1,0 +1,9 @@
+{
+  "name": "商品名称",
+  "price": "商品价格",
+  "realPrice":"实际价格",
+  "save":"节省价格",
+  "dependencies": {
+    
+  }
+}

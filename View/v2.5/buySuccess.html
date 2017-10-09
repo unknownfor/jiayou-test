@@ -21,18 +21,44 @@
 <div class="wrapper buySuccess-wrapper hide">
 
     <div class="head-box">
-        <img src="../../Content/images/v2.5/"
+        <div class="head-img">
+            <img src="../../Content/images/v2.5/buySuccess/icon.png">
+        </div>
+        <div>支付成功</div>
     </div>
 
-    <div class="middle-box"></div>
+    <div class="item-box border">
+        <div class="item-title">商品名称：</div>
+        <div class="item-info">¥19.9×1</div>
+    </div>
+        <div class="item-box color border">
+            <div class="item-title">特权会员</div>
+            <div class="item-info">¥19.9×1</div>
+        </div>
+    <div class="item-box margin ">
+        <div class="item-title">实付金额：</div>
+        <div class="item-info">100（节省30元）</div>
+    </div>
+    <div class="item-box border">
+        <div class="item-title">支付方式：</div>
+        <div class="item-info">微信支付</div>
+    </div>
+    <div class="item-box border">
+        <div class="item-title">订单编号：</div>
+        <div class="item-info">201702145489654</div>
+    </div>
+    <div class="item-box">
+        <div class="item-title">订单时间：</div>
+        <div class="item-info">2017-04-20 21：14：14</div>
+    </div>
 
-    <div class="footer-box"></div>
+    </div>
 
 
 
 
     <!--防止刚进入页面时，在token数据未加载，点击菜单栏导致错误。加上蒙板-->
-    <!--<div class="modal-box" id="cover-box"></div>-->
+    <div class="modal-box" id="cover-box"></div>
 
 </div>
 
@@ -48,6 +74,6 @@
         redirectUrl:'__WX_RedirectUrl__'
     };
 </script>
-<!--<script data-main="../../Javascript/app/main/v2.5/privilege" src="../../Javascript/libs/require.js" type="text/javascript"></script>-->
+<script data-main="../../Javascript/app/main/v2.5/buysuccess" src="../../Javascript/libs/require.js" type="text/javascript"></script>
 </body>
 </html>
