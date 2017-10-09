@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <title>加油赞{$title}</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="Resource-type" content="Document">
+    <!--禁止缩放-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <!--禁止数字识别为手机号-->
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta http-equiv="Cache" content="no-cache">
+    <link href="__STYLE__/iconfont/iconfont.css" rel="stylesheet" type="text/css">
+    <link href="__STYLE__/css/index.css" rel="stylesheet" type="text/css">
+    <script>
+        window.urlObject = {
+            js: "__JS__",
+            css: "__STYLE__",
+            image: "__IMG__",
+            json: "__JSON__",
+            ctrl: '__CTRL__',
+            apiUrl: '__API__',
+            appid: '__WX_AppID',
+            redirectUrl: '__WX_RedirectUrl',
+        };
+    </script>
+</head>
+
+<body>
+    <div class="wrapper order-wrapper"></div>
+    <div class="loding-modal">
+        <i id="imgLoadingCircle" class="loadingCircle active"></i>
+        <div>加载中…</div>
+    </div>
+    <script data-main="__JS__/app/main/orderconfirm" src="__JS__/libs/require.js" type="text/javascript"></script>
+    <script type="text/html" id="orderTemplate">
+        <div class="order-item margin-top-xl margin-bottom">
+        {{if booking}}
+           {{ each order.goods_detail good }}
+           <div class="order-info-item">
+                <span class="key">{{ good.goods_name }}</span>
+                <div class="val">
+                    <span class="" >￥{{ good.price }}</span>
+                </div>
+            </div>
+           {{ /each }}
+        {{ else }}
+            {{ each order good }}
+            <div class="order-info-item">
+                <span class="key">{{ good.title }}</span>
+                <div class="val">
+                    <span class="" >￥{{ good.marketprice }}</span>
+                </div>
+            </div>
+            {{ /each }}
+        {{ /if }}
+        </div>
+        <div class="order-info-item invoice-default-box margin-bottom">
+            <span class="key">额外消费：</span>
+            <div class="val">
+                <input type="number" id="extra-amount" class="normal-input" placeholder="请与店员核对金额后支付">
+            </div>
+        </div>
+        <div class="order-info-item discount-default-box">
+            <span class="key">红包抵扣</span>
+            <div class="val">
+                <span id="discount-amount" data-coupon-id="{{info.use_coupon_id}}" class="selected-invoice-title">暂无可用红包</span>
+                <span class="iconfont icon-right"></span>
+            </div>
+        </div>
+        {{ if booking }}
+        <div class="btn normal-h-btn order-confirm-btn">去支付 ¥<span id="totalMoney">{{order.total_price}}</span>（已节省¥{{order.discountprice}}）</div>
+        {{ else }}
+        <div class="btn normal-h-btn order-confirm-btn">去支付 ¥<span id="totalMoney">{{info.totol_money}}</span>（已节省¥{{info.use_dif_money}}）</div>
+        {{ /if }}
+        <p class="order-tip">买单仅限于到店支付，请确认金额后提交</p>
+    </script>
+</body>
+
+</html>

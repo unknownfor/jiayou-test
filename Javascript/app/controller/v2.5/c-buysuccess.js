@@ -18,10 +18,12 @@ define(['base','wx'],function (BaseClass,wx) {
 
     var pt=Buysuccess.prototype;
 
+
+
     /*获取信息*/
     pt.getBuySuccessInfo=function(){
         this.ctrlLoadingIcon();
-        var url='../../data/buy.json';
+        var url='../../data/buySuccess.json';
         $.getJSON(url,null,$.proxy(this,'getInfoSuccess'));
     };
 
@@ -59,12 +61,13 @@ define(['base','wx'],function (BaseClass,wx) {
             '    </div>' +
             '    <div class="item-box border">' +
             '        <div class="item-title">订单编号：</div>' +
-            '        <div class="item-info">201702145489654</div>' +
+            '        <div class="item-info">'+ item.number +'</div>' +
             '    </div>' +
             '    <div class="item-box">' +
             '        <div class="item-title">订单时间：</div>' +
-            '        <div class="item-info">2017-04-20 21：14：14</div>' +
+            '        <div class="item-info">'+ item.time +'</div>' +
             '    </div>';
+        $('.head-box').after(str);
     };
 
 

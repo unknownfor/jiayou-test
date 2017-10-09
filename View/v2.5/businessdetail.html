@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <title>加油赞{$title}</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="Resource-type" content="Document">
+    <!--禁止缩放-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <!--禁止数字识别为手机号-->
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta http-equiv="Cache" content="no-cache">
+    <link href="__STYLE__/iconfont/iconfont.css" rel="stylesheet" type="text/css">
+    <link href="__STYLE__/css/index.css" rel="stylesheet" type="text/css">
+    <link href="__STYLE__/css/swiper.min.css" rel="stylesheet" type="text/css">
+    <script>
+        window.urlObject = {
+            js: "__JS__",
+            css: "__STYLE__",
+            image: "__IMG__",
+            json: "__JSON__",
+            ctrl: '__CTRL__',
+            apiUrl: '__API__',
+            appid: '__WX_AppID__',
+            redirectUrl: '__WX_RedirectUrl__',
+        };
+    </script>
+</head>
+<body>
+<div class="wrapper businessdetail-wrapper"></div>
+
+<div class="loding-modal">
+    <i id="imgLoadingCircle" class="loadingCircle active"></i>
+    <div>加载中…</div>
+</div>
+<script data-main="__JS__/app/main/businessdetail" src="__JS__/libs/require.js" type="text/javascript"></script>
+<!-- banner -->
+<script type="text/html" id="sliderTemplate">
+    {{ each $data.banner }}
+    <div class="swiper-slide"><a href="{{ $value.link }}"><img src="{{ $value.thumb_url }}"/></a></div>
+    {{ /each }}
+</script>
+<!-- 具体服务项目 -->
+<script type="text/html" id="itemTemplate">
+    {{if $data.isNoGoods }}
+        {{ each $data.goods good }}
+        <li class="list-item">
+                {{ each good item }}
+                <div class="service-item" data-type="{{ item.cates }}" data-id="{{ item.id }}">
+                    {{ if item.cates != 4 }}
+                    <div class="service-item-left float-l">
+                        <span><input type="checkbox" class="form-icon-checked" data-money="{{ item.marketprice }}"></span>
+                    </div>
+                    {{ /if }}
+                    <div class="sercive-item-in">
+                        <h3 class="service-title">{{ item.title }}</h3>
+                        <p class="service-info">{{ item.subtitle }}</p>
+                        <div class="clearfix service-footer">
+                            <span class="service-money">¥{{ item.marketprice }}</span>
+                            <span class="old-money">¥{{ item.productprice }}</span>
+
+                            {{ if item.cates == 4 }}
+                            <button class="float-r btn btn-mini btn-warn" cates="{{ item.cates }}">预约</button>
+                            {{ /if }}
+                        </div>
+                    </div>
+                </div>
+            {{ /each }}
+        </li>
+        {{ /each }}
+    {{else}}
+    <div style="text-align: center;margin-top:20px;color:#888;">暂无商品</div>
+    {{/if}}
+</script>
+<!-- 商家信息 -->
+<script type="text/html" id="shopInfoTemplate">
+    <div class="place">
+        <span class="place-info">地址：{{ shop.address }}</span>
+        <span class="navigation">
+            <a href="{{ shop.navigation }}">
+                <img src="__IMG__/detail/map.png"
+                     srcset="__IMG__/detail/map@2x.png 2x,__IMG__/detail/map@3x.png 3x">
+            </a>
+            {{ shop.distance }}
+        </span>
+    </div>
+    <div class="time">
+        <span class="time-info">营业时间：9: 30-17: 30</span>
+        <span class="tel">
+            <a href="" id="tel"><img src="__IMG__/detail/shape.png"
+                                     srcset="__IMG__/detail/shape@2x.png 2x,__IMG__/detail/shape@3x.png 3x"></a>
+        </span>
+    </div>
+</script>
+<!-- 商家服务分类 -->
+<script type="text/html" id="goodsCategoryTemplate">
+    {{ each $data.goodsCategory item index }}
+    <li class="scrollNav scrollNav_{{ index }}">{{ item.name }}</li>
+    {{ /each }}
+</script>
+<!-- 页面主体框架 -->
+<script type="text/html" id="contentTemplate">
+    <div class="detail-top">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">1</div>
+                <div class="swiper-slide">2</div>
+                <div class="swiper-slide">3</div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+        <div class="complaints"><a href="#">投诉</a></div>
+        <div class="place-wrapper"></div>
+    </div>
+    <!-- 模版注入点 -->
+    <div class="business-content">
+
+        <div class="service-wrap">
+            <ul class="">
+                {{ include 'itemTemplate' $data }}
+                <li class="list-item" style="height:30px"></li>
+            </ul>
+        </div>
+        <ul class="pageScroll left">
+            {{ include 'goodsCategoryTemplate' $data }}
+        </ul>
+    </div>
+    <div class="footer-btn form-footer border-t">
+        <div class="form-btn form-btn-primary">
+            {{ if is_collect }}
+            <img src="__IMG__/detail/star2.png" srcset="__IMG__/detail/star2@2x.png 2x,__IMG__/detail/star2@3x.png 3x"
+                 class="star-btn">已收藏
+            {{ else }}
+            <img src="__IMG__/detail/star.png" srcset="__IMG__/detail/star@2x.png 2x,__IMG__/detail/star@3x.png 3x"
+                 class="star-btn">收藏
+            {{ /if }}
+        </div>
+        <div class="form-btn form-btn-warn form-btn-disabled payment-btn">去支付<span id="money-total"></span></div>
+    </div>
+</script>
+</body>
+</html>

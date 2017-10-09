@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <title>加油赞{$title}</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="Resource-type" content="Document">
+    <!--禁止缩放-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <!--禁止数字识别为手机号-->
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta http-equiv="Cache" content="no-cache">
+    <link href="../../Content/style/iconfont/iconfont.css" rel="stylesheet" type="text/css">
+    <link href="../../Content/style/css/index.css" rel="stylesheet" type="text/css">
+    <script>
+        window.urlObject= {
+            js: "__JS__",
+            css: "__STYLE__",
+            image: "__IMG__",
+            json: "__JSON__",
+            ctrl:'__CTRL__',
+            apiUrl:'__API__',
+            appid:'__WX_AppID__',
+            host:'__Host__',
+            redirectUrl:'__WX_RedirectUrl__',
+        };
+    </script>
+</head>
+<body>
+    <div class="wrapper main-page-wrapper home-wrapper" data-code="{$code}">
+        <div class="banner-box">
+            <div id="banner-main"></div>
+        </div>
+
+        <!--购买会员-->
+        <a class="show-tip" href="javascript:void(0)">
+            <div class="icon-box">
+                <img src="../../Content/images/home/crown.png" />
+            </div>
+            <div class="tip">加油赞特权会员，满<span>100减2</span>，一年可省999</div>
+            <span class="iconfont icon-right"></span>
+        </a>
+
+
+
+        <div class="station-box">
+            <ul class="station-main">
+            </ul>
+            <div class="no-station">
+                <div><span class="iconfont icon-smile"></span></div>
+                <div>附近800m内没有合作加油站</div>
+            </div>
+            <div class="more-station-btn">
+                <div class="not-loaded-all">
+                    <div class="station-btn-tips station-btn-main">
+                        <span>点击下拉获取更多加油站</span>
+                    </div>
+                    <div class="trapezoid-box">
+                    </div>
+                </div>
+                <div class="has-loaded-all">
+                    <div class="station-btn-tips">
+                        <span>已全部加载</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <include file="Public:menu" />
+
+    <div class="modal-box" id="coupon">
+        <div class="modal-box-main">
+            <div class="coupon-content">
+                <div id="coupon-main" class="coupon-main-box"></div>
+            </div>
+            <div class="coupon-btn">
+                <div class="btn take-btn">立即领取新人红包</div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-box" id="confirm-box">
+        <div class="modal-box-main middle-size">
+            <div class="close-head">
+                <span class="iconfont icon-ioscloseoutline"></span>
+            </div>
+            <div class="confirm-main">
+                <div class="confirm-tips">请向加油员确认当前加油站名称</div>
+                <div id="current-station-name">武汉测试加油站</div>
+                <div class="btn confirm-btn">确定加油</div>
+                <div class="confirm-alert">如因站点选择错误给你带来不便，</div>
+                <div class="no-duty">加油站概不负责</div>
+            </div>
+        </div>
+    </div>
+    <div class="loding-modal">
+        <i id="imgLoadingCircle" class="loadingCircle active"></i>
+        <div>加载中…</div>
+    </div>
+
+    <!--防止刚进入页面时，在token数据未加载，点击菜单栏导致错误。加上蒙板-->
+    <div class="modal-box" id="cover-box"></div>
+</body>
+<!--<script data-main="__JS__/app/main/home" src="__JS__/libs/require.js" type="text/javascript"></script>-->
+</html>

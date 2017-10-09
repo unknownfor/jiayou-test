@@ -1,0 +1,162 @@
+<div class="wrapper order-wrapper"
+     data-gun-id="{$gun_id}"
+     data-gun-sn="{$gun_sn}"
+     data-type="{$type}#"
+     data-amount="{$amount}"
+     data-coupon-id="{$coupon_id}">
+    <div class="location-box">
+        <div class="location-name">
+            <span>订单信息：</span>
+        </div>
+    </div>
+    <div class="order-info-item gas-type-amount">
+        <span class="key">{$type}#</span>
+        <span class="val" data-amount="{$amount}">¥{$amount}</span>
+    </div>
+    <div class="order-info-item discount-default-box">
+        <span class="key">优惠券</span>
+        <div class="val">
+            <span class="" id="discount-amount"></span>
+            <span class="iconfont icon-right"></span>
+        </div>
+    </div>
+    <div class="order-info-item invoice-default-box">
+        <span class="key">发票抬头</span>
+        <div class="val">
+            <span class="selected-invoice-title"></span>
+            <span class="iconfont icon-right"></span>
+        </div>
+    </div>
+    <!--购买会员-->
+    <a class="show-tip" href="javascript:void(0)">
+        <div class="icon-box">
+            <img src="../../Content/images/home/crown.png" />
+        </div>
+        <div class="tip">加油赞特权会员，满<span>100减2</span>，一年可省999</div>
+        <span class="iconfont icon-right"></span>
+    </a>
+
+
+    <div class="btn normal-h-btn order-btn"></div>
+
+    <!--发票抬头-->
+    <div class="modal-box" id="invoice-box">
+        <div class="modal-box-main" id="my-invoice-box">
+            <div class="location-box" id="invoice-location">
+                <div class="location-name">
+                    <span>请选择发票抬头</span>
+                    <span class="iconfont icon-ioscloseoutline close-icon" id="close-invoice-box"></span>
+                </div>
+            </div>
+            <div class="invoice-ul-main">
+                <ul id="invoice-ul">
+                    <!--<li data-id="-1">-->
+                        <!--<div class="left-box">-->
+                            <!--<span class="iconfont icon-checknormal"></span>-->
+                        <!--</div>-->
+                        <!--<div class="middle-box">-->
+                            <!--<div class="invoice-title" data-title="个人">个人</div>-->
+                        <!--</div>-->
+                        <!--<div class="right-box">-->
+                            <!--<div class="invoice-default-btn single-item">-->
+                                <!--<span class="iconfont icon-check3"></span>-->
+                                <!--<span class="txt">默认使用</span>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</li>-->
+                    <li data-id="0">
+                        <div class="left-box">
+                            <span class="iconfont icon-checknormal"></span>
+                        </div>
+                        <div class="middle-box">
+                            <div class="invoice-title" data-title="不开发票">不开发票</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="bottom-box">
+                <div class="btn invoice-btn" id="new-invoice-btn">
+                    <span class="iconfont icon-add-copy"></span>
+                    添加发票抬头
+                </div>
+            </div>
+        </div>
+        <div class="modal-box-main" id="new-invoice-box">
+            <div class="location-box">
+                <div class="location-name">
+                    <span>添加发票抬头</span>
+                    <span class="iconfont icon-ioscloseoutline close-icon" id="close-new-invoice-box"></span>
+                </div>
+            </div>
+            <ul id="new-invoice-ul" class="operate-invoice-ul">
+                <li class="border">
+                    <span class="key">抬头类型</span>
+                    <div class="val invoice-type-btns" data-new-type="2">
+                        <div class="btn default-btn">个人</div>
+                        <div class="btn red-btn">单位</div>
+                    </div>
+                </li>
+                <li class="personal-invoice hide">
+                    <span class="key">发票抬头</span>
+                    <div class="val">
+                        <input type="text" class="normal-input" id="personal-name-input">
+                    </div>
+                </li>
+                <li class="company-invoice border">
+                    <div class="key">发票抬头</div>
+                    <div class="val">
+                        <input type="text" class="normal-input" id="company-name-input">
+                    </div>
+                </li>
+                <li class="company-invoice">
+                    <div class="key">税号</div>
+                    <div class="val">
+                        <input type="text" class="normal-input" id="company-taxno-input" placeholder="请输入18位数字或字母">
+                    </div>
+                </li>
+            </ul>
+            <div class="btn invoice-btn disabled" id="save-new-invoice">保存</div>
+            <div class="btn cancel-btn invoice-btn" id="cancel-new-invoice">关闭</div>
+        </div>
+        <div class="modal-box-main" id="edit-invoice-box">
+            <div class="location-box">
+                <div class="location-name">
+                    <span>编辑发票抬头</span>
+                    <span class="iconfont icon-ioscloseoutline close-icon" id="close-edit-invoice-box"></span>
+                </div>
+            </div>
+            <ul id="edit-invoice-ul" class="operate-invoice-ul">
+                <li class="border">
+                    <span class="key">抬头类型</span>
+                    <div class="val invoice-type-btns">
+                        <div class="btn default-btn">个人</div>
+                        <div class="btn red-btn">单位</div>
+                    </div>
+                </li>
+                <li class="personal-invoice hide">
+                    <span class="key">发票抬头</span>
+                    <div class="val">
+                        <input type="text" class="normal-input" id="edit-personal-name-input">
+                    </div>
+                </li>
+                <li class="company-invoice border">
+                    <div class="key">发票抬头</div>
+                    <div class="val">
+                        <input type="text" class="normal-input" id="edit-company-name-input">
+                    </div>
+                </li>
+                <li class="company-invoice">
+                    <div class="key">税号</div>
+                    <div class="val">
+                        <input type="text" class="normal-input" id="edit-company-taxno-input" placeholder="请输入18位数字或字母">
+                    </div>
+                </li>
+            </ul>
+            <div class="btn invoice-btn disabled" id="save-edit-invoice">保存</div>
+            <div class="btn cancel-btn invoice-btn" id="cancel-edit-invoice">关闭</div>
+        </div>
+    </div>
+
+
+</div>
+<script data-main="__JS__/app/main/order" src="__JS__/libs/require.js" type="text/javascript"></script>
