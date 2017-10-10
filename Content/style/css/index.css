@@ -6473,6 +6473,159 @@ body {
     line-height: 24px;
   }
 }
+.agentService-wrapper {
+  max-width: 700px;
+  margin: 0 auto;
+  height: 100%;
+  background-color: #ffffff;
+}
+.agentService-wrapper .line {
+  height: 10px;
+  background-color: #F2F2F2;
+}
+.agentService-wrapper .head {
+  text-align: center;
+  height: 45px;
+  line-height: 45px;
+  color: #333333;
+}
+.agentService-wrapper .item-box .item {
+  background-color: #fff;
+  width: 100%;
+  height: 45px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0 15px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  text-decoration: none;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  position: relative;
+}
+.agentService-wrapper .item-box .item .item-left {
+  margin-right: 8px;
+}
+.agentService-wrapper .item-box .item .item-input {
+  border: none;
+  height: 75%;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+.agentService-wrapper .item-box .item.border {
+  border-bottom: 1px solid #dfdfdf;
+}
+.agentService-wrapper .box {
+  padding-top: 15px;
+  text-align: center;
+}
+.agentService-wrapper .box .container {
+  margin: 0 20px;
+  height: 200px;
+  border: 2px dashed #d0d0d0;
+  position: relative;
+}
+.agentService-wrapper .box .container .container-box {
+  display: inline-block;
+  width: 97%;
+  height: 95%;
+  margin: 5px;
+  background-color: #F5F5F5;
+}
+.agentService-wrapper .box .container .container-box .license-box {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  opacity: 0;
+  z-index: 1000;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-user-select: none;
+  -moz-user-focus: none;
+  -moz-user-select: none;
+  -webkit-appearance: none;
+  outline: none;
+  border: none;
+}
+.agentService-wrapper .box .container .container-box .license-box .loadImgBtn {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.agentService-wrapper .box .container .container-box .avatar-img {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+.agentService-wrapper .box .container .container-box .license-img {
+  max-height: 100%;
+  width: 100%;
+}
+.agentService-wrapper .box .container .container-box .uploadImg {
+  background: none;
+  outline: none;
+  border: 0;
+  width: 85px;
+  height: 85px;
+  border-radius: 85px;
+  margin: 25px 0;
+  cursor: pointer;
+}
+.agentService-wrapper .box .container .container-box .description {
+  font-size: 16px;
+}
+.agentService-wrapper .box .container.last-child {
+  margin-top: 30px;
+}
+.agentService-wrapper .box .delete {
+  padding: 15px 30px 15px 0;
+  text-align: right;
+}
+.agentService-wrapper .box .delete > img {
+  width: 20px;
+  height: 25px;
+}
+.agentService-wrapper .save-btn {
+  margin: 25px;
+  line-height: 45px;
+  color: #ffffff;
+  text-align: center;
+}
+.agentService-wrapper .save-btn .save {
+  display: inline-block;
+  background-color: #eb4452;
+  width: 100%;
+  height: 45px;
+  border-radius: 6px;
+}
+.agentService-wrapper .save-btn .save.nouse {
+  background-color: rgba(165, 165, 165, 0.8);
+  pointer-events: none;
+}
+.agentService-wrapper .margin {
+  margin-bottom: 10px;
+}
+.agentService-wrapper.hide {
+  display: none;
+  opacity: 0;
+}
 #menu-wrapper {
   height: 50px;
   background-color: #fff;

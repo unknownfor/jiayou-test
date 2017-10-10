@@ -17,8 +17,6 @@ define(['base', 'wx'], function (BaseClass,wx) {
 
         $(document).on(this.eventName,'.icon-help',$.proxy(this,'showTipBox'));
 
-        //点击按钮变色
-
         /*点击灰色部分关闭*/
         $(document).on(this.eventName,'.help-box',function(e){
             that.toHideModuleByClickOutside(e,$.proxy(that,'hideTipBox'));

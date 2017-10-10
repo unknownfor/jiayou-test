@@ -1,92 +1,54 @@
 /**
- * Created by mayoi on 2017/07/29.
+ * Created by mayoi on 2017/10/10.
  */
-//添加行驶证
-
+//代理服务
 define(['base','wx'],function (BaseClass,wx) {
-    function carLicense($wrapper) {
+    function agentService($wrapper) {
+
         BaseClass.call(this,$wrapper);
 
-        //记录旧信息
-        // this.oldInfo={
-        //     avatar_front:'',
-        //     avatar_back:''
-        // };
-
-
-        //查询行驶证
-        // this.getLicenseInfo();
-
+        //检查数据是否输入
+        $(document).on('input', '.phone', function(){
+            //页面禁止滚动
+            that.scrollControl(true);
+            //校准车牌号
+            pt.checkInfo();
+        });
 
         //驾驶证正面上传
         $(document).on('change','#front',$.proxy(this,'upLoadFrontImg'));
         //驾驶证反面上传
         $(document).on('change','#back',$.proxy(this,'upLoadBackImg'));
 
-    };
 
-    carLicense.prototype=new BaseClass();
-    carLicense.constructor=carLicense;
+        $(document).on(this.eventName,'.save-btn.active',$.proxy(that,'putAgentServiceInfo'));
 
-    var pt=carLicense.prototype;
-
-    /*获取我的行驶证*/
-    //http://xx.com/v2/XX
-    pt.getLicenseInfo=function(){
-        this.ctrlLoadingIcon();
-        var param={},
-            url='/v2/vehicle_licence',
-            options={
-                errorCallback:$.proxy(this,'getInfoError')
-            };
-        this.getDataAsync(url,param,$.proxy(this,'getInfoSuccess'),options);
     };
 
 
-    /*获取成功*/
-    pt.getInfoSuccess=function(data){
-        this.ctrlLoadingIcon(false);
-        $('#avatar-front').attr('src',data.front_avatar);
-        $('#avatar-back').attr('src',data.back_avatar);
-        this.oldInfo.front_avatar=data.front_avatar; //记录旧的信息，不修改则不提交
-        this.oldInfo.back_avatar=data.back_avatar;
+    agentService.prototype=new BaseClass();
+    agentService.constructor=agentService;
+
+    var pt=agentService.prototype;
+
+
+    //检查数据是否有输入
+    pt.checkInfo = function (){
+        var name=$('.name').val(),
+            phone=$('.phone').val(),
+            reg = /^1(3|4|5|7|8)\d{9}$/,
+            $btn=$('.save');
+        if(name != '') {
+            if (reg.test(phone)) {
+                $btn.removeClass('nouse').addClass('active');
+            } else {
+                $btn.addClass('nouse').removeClass('active');
+            }
+        }else {
+            $btn.addClass('nouse').removeClass('active');
+        }
     };
 
-
-    /*获取失败*/
-    pt.getInfoError=function(result){
-        this.ctrlLoadingIcon(false);
-        this.showTips({txt:'个人信息加载失败'});
-    };
-
-
-    /*更新数据*/
-    pt.update=function(type,val,callback){
-        var that=this,
-            url='/v1/user',
-            params={
-                type:type
-            },
-            options={
-                type:'put',
-                token:true,
-                errorCallback:function(res){
-                    that.showTips({txt:res.msg});
-                }
-            };
-        params[type]=val;
-        this.getDataAsync(url,params,function(res){
-            // if(type=='avatar_front') {
-            //     that.oldInfo.avatar_front = val;
-            // }else if(type=='avatar_back'){
-            //     that.oldInfo.avatar_back = val;
-            //     //记录旧的信息，不修改则不提交
-            // }
-            // else{
-                callback && callback();
-            // }
-        },options);
-    };
 
     //上传图片
     pt.upLoadFrontImg=function(){
@@ -94,7 +56,7 @@ define(['base','wx'],function (BaseClass,wx) {
         this.ctrlCoverStatus();
         var fd = new FormData(),
             that=this;
-        fd.append("image", $("#avatar-front")[0].files[0]);
+        fd.append("image", $("#front")[0].files[0]);
         $.ajax({
             //http://xx.com/v2/vehicle_license_front_uploads
             url: window.urlObject.apiUrl+ '/v2/vehicle_license_front_uploads',
@@ -103,8 +65,8 @@ define(['base','wx'],function (BaseClass,wx) {
             contentType: false,
             data: fd,
             complete:function(xmlRequest, status){
-                $('#avatar-front')[0].reset();
-                if (status == 'success') {
+                $('#front')[0].reset();
+                if (code == 201) {
                     if(xmlRequest.responseText) {
                         var str='',
                             res = JSON.parse(xmlRequest.responseText);
@@ -136,7 +98,7 @@ define(['base','wx'],function (BaseClass,wx) {
         this.ctrlCoverStatus();
         var fd = new FormData(),
             that=this;
-        fd.append("image", $("#avatar-back")[0].files[0]);
+        fd.append("image", $("#back")[0].files[0]);
         $.ajax({
             //http://xx.com/v2/vehicle_license_back_uploads
             url: window.urlObject.apiUrl+ '/v2/vehicle_license_back_uploads',
@@ -145,7 +107,7 @@ define(['base','wx'],function (BaseClass,wx) {
             contentType: false,
             data: fd,
             complete:function(xmlRequest, status) {
-                $('#avatar-back')[0].reset();
+                $('#back')[0].reset();
                 if (status == 'success') {
                     if (xmlRequest.responseText) {
                         var str = '',
@@ -177,11 +139,19 @@ define(['base','wx'],function (BaseClass,wx) {
     //上传图片时间较长，防止再次提交
     pt.ctrlCoverStatus=function(flag){
         if(flag!==false) {
-            $('#carlicense-cover-box').show();
+            $('#agentService-cover-box').show();
         }else{
-            $('#carlicense-cover-box').hide();
+            $('#agentService-cover-box').hide();
         }
     };
 
-    return carLicense;
+
+    //提交数据
+    pt.putAgentServiceInfo = function () {
+
+    };
+
+
+    return agentService;
+
 });
