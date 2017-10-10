@@ -6420,6 +6420,10 @@ body {
 .carbrand-wrapper .container .city .city-list {
   background-color: #ffffff;
 }
+.carbrand-wrapper .container .city .city-list > a {
+  display: inline-block;
+  width: 100%;
+}
 .carbrand-wrapper .container .city .city-list:last-child > P {
   border-bottom: none;
 }

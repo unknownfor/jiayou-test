@@ -90,14 +90,17 @@ define(['base','wx'],function (BaseClass,wx) {
     pt.getSingleCarBrandInfoStr=function(brand){
         var len=brand.length,
             str='',
+            url,
             item;
         for(var i=0;i<len;i++){
             item=brand[i];
             str+=  '<div class="city-list">' +
+                '<a href="'+ url + item.id+'"> '+
                 '                <p class="brand" data-id="'+ item.id +'">' +
                 '                    <img class="icon-car" src="'+ item.logo_img +'">' +
                 '                    <span>'+ item.name +'</span>' +
                 '                </p>' +
+                '</a>'+
                 '            </div>'   ;
         }
         return str;
