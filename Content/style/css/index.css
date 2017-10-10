@@ -3833,6 +3833,7 @@ a:active {
   font-size: 14px;
 }
 .businessdetail-wrapper .detail-top .place-wrapper .place {
+  overflow: hidden;
   margin-top: 10px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -3840,15 +3841,10 @@ a:active {
   display: flex;
 }
 .businessdetail-wrapper .detail-top .place-wrapper .place .place-info {
-  -webkit-box-flex: 4;
-  -webkit-flex: 4;
-  -ms-flex: 4;
-  flex: 4;
+  float: left;
 }
 .businessdetail-wrapper .detail-top .place-wrapper .place .navigation {
-  -webkit-flex-basis: 80px;
-  -ms-flex-preferred-size: 80px;
-  flex-basis: 80px;
+  float: right;
 }
 .businessdetail-wrapper .detail-top .place-wrapper .place img {
   width: 11px;
@@ -3953,6 +3949,29 @@ a:active {
   font-size: 12px;
   color: #8a8a8a;
   text-decoration: line-through;
+}
+.businessdetail-wrapper .service-wrap .privilege-money {
+  font-size: 12px;
+  padding: 2px 3px;
+  display: inline-block;
+  height: 20px;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+}
+.businessdetail-wrapper .service-wrap .privilege-money .left-icon {
+  display: inline-block;
+  width: 15px;
+  height: 20px;
+}
+.businessdetail-wrapper .service-wrap .privilege-money .right-txt {
+  display: inline-block;
+}
+.businessdetail-wrapper .service-wrap .privilege-money .right-txt .txt {
+  color: #333333;
+  margin-right: 5px;
+}
+.businessdetail-wrapper .service-wrap .privilege-money .right-txt .price {
+  color: #eb4452;
 }
 .businessdetail-wrapper .pageScroll {
   width: 75px;

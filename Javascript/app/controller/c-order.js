@@ -717,6 +717,27 @@ define(['base','coupon','confirmbox','wx','wxconfig'],function (BaseClass,Coupon
         });
     };
 
+    //展示特权会员信息
+    pt.showPrivilegeInfo = function (data) {
+        var str='',
+            str1;
+        //如果不是会员
+        if(data.status==0) {
+            str = '<div class="tip">加油赞特权会员，满<span>100减2</span>，一年可省999</div>';
+        }else {
+            //如果是会员
+            str ='<div class="tip">加油赞特权会员省'+ data.saveMoney+'元</div>';
+        }
+        str1= ' <a class="show-tip" href="javascript:void(0)">' +
+            '        <div class="icon-box">' +
+            '            <img src="../../Content/images/home/crown.png" />' +
+            '        </div>' +
+            str +
+            '        <span class="iconfont icon-right"></span>' +
+            '    </a>';
+        $('.invoice-default-box').after(str1);
+    };
+
 
     return Order;
 });
