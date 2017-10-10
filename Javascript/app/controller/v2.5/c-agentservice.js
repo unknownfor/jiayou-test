@@ -73,7 +73,7 @@ define(['base','wx'],function (BaseClass,wx) {
                         pt.update('avatar',res.url,function(){
                             that.ctrlLoadingIcon(false);
                             that.ctrlCoverStatus(false);
-                            var str='<img class="avatar-img" id="avatar-front" src="'+ res.url +'" />';
+                            var str='<img class="avatar-img" id="front" src="'+ res.url +'" />';
                             $('.box-front-info').addClass('hide');
                             return str;
                         });
@@ -82,7 +82,7 @@ define(['base','wx'],function (BaseClass,wx) {
                 //超时
                 else if (status == 'timeout') {
                     that.ctrlLoadingIcon(false);
-                    that.showTips({txt:'请求超时，请稍后重试'})
+                    that.showTips({txt:'请求超时，请稍后重试'});
                 }
                 else{
                     that.ctrlLoadingIcon(false);
@@ -115,7 +115,7 @@ define(['base','wx'],function (BaseClass,wx) {
                         pt.update('avatar', res.url, function () {
                             that.ctrlLoadingIcon(false);
                             that.ctrlCoverStatus(false);
-                            var str = '<img class="avatar-img" id="avatar-back" src="' + res.url + '" />';
+                            var str = '<img class="avatar-img" id="back" src="' + res.url + '" />';
                             $('.box-back-info').addClass('hide');
                             return str;
                         });
@@ -123,7 +123,7 @@ define(['base','wx'],function (BaseClass,wx) {
                     //超时
                     else if (status == 'timeout') {
                         that.ctrlLoadingIcon(false);
-                        that.showTips({txt: '请求超时，请稍后重试'})
+                        that.showTips({txt: '请求超时，请稍后重试'});
                     }
                     else {
                         that.ctrlLoadingIcon(false);
@@ -146,9 +146,35 @@ define(['base','wx'],function (BaseClass,wx) {
     };
 
 
-    //提交数据
-    pt.putAgentServiceInfo = function () {
+    //删除图片信息
+    pt.deleteImgInfo=function() {
 
+    };
+
+
+    //提交数据
+    //需要token
+    pt.putAgentServiceInfo = function () {
+        var that=this,
+            name=$('.name').val(),
+            phone=$('.phone').val();
+        params= {
+            name:name,
+            phone: phone
+        };
+        var url='/v2/xx',
+            options={
+                type:'post',
+                token:true,
+                errorCallback:function(res){
+                    that.showTips({txt:'添加失败'});
+                }
+            };
+        this.getDataAsync(url,params,function(result){
+            //提交信息
+
+            that.showTips({txt:'上传成功，等待审核'});
+        },options);
     };
 
 
