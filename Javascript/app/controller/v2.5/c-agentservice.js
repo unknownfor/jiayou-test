@@ -7,6 +7,8 @@ define(['base','wx'],function (BaseClass,wx) {
 
         BaseClass.call(this,$wrapper);
 
+        var that = this;
+
         //检查数据是否输入
         $(document).on('input', '.phone', function(){
             //页面禁止滚动
