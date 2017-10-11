@@ -46,7 +46,7 @@ define(['base','wx','wxconfig'],function (BaseClass,wx,WxConfig) {
         url = window.urlObject.ctrl;
         len=data.member_car_list.length;
         if(data.member_car_list.length == 0) {
-            str = '<a class="car-item margin" href="'+ url +'/addcar'+'">' +
+            str = '<a class="car-item margin" href="'+ url +'/mycar'+'">' +
                 '<div class="info-box">' +
                 '<span class="add-car">添加我的爱车</span>' +
                 '</div>' +
@@ -55,7 +55,7 @@ define(['base','wx','wxconfig'],function (BaseClass,wx,WxConfig) {
         }else {
             for (var i=0;i<len;i++) {
                 item = data.member_car_list[0];
-                str = '<a class="car-item margin" href="'+ url +'/carinfo'+'">' +
+                str = '<a class="car-item margin" href="'+ url +'/mycar'+'">' +
                     '<div class="icon-car">' +
                     '<img src="'+ item.logo_img +'" />' +
                     '</div>' +
