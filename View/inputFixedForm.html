@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <title>+fixed的bug</title>
+    <style>
+        #h5applyvip {
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+         .header {
+              width: 7.5rem;
+              height: 3.1rem;
+          //头部的定死高度 }
+        .content {
+            flex: 1;
+            width: 100%;
+        //content是撑满
+        }
+        .footer {
+            height: 1.1rem;
+        //脚部的定死高度 width:100%;
+        }
+
+    </style>
+</head>
+<body>
+<article id="h5applyvip">
+    <header class="header"></header>
+    <div class="content">
+        <form class="form">
+            <input type="text" class="input" name="name" v-model.trim = "formData.name">
+            <input type="text" class="input" name="name" v-model.trim = "formData.name" >
+            <input type="text" class="input" name="name" v-model.trim = "formData.name" >
+            <input type="text" class="input" name="name" v-model.trim = "formData.name" >
+        </form>
+    </div>
+    <footer class="footer"  @click="openClick(formData)">   <!--立即开通-->
+        <img src="./images/open-btn@2x.png" alt="" class="open-btn">
+    </footer>
+</article>
+</body>
+</html>
