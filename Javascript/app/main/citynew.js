@@ -13,15 +13,15 @@ requirejs.config({
         // super:'app/model/super',
         // base:'app/model/base',
         // ccity:'app/controller/c-city'
-        $:'../../libs/zepto.min',
-        touch:'../../libs/zepto.event.touch',
-        async:'../../libs/async',
-        fastclick:'../../libs/fastclick.min',
-        wx:'../../libs/jweixin-1.0.0',
-        wxconfig:'../model/wxconfig',
-        super:'../model/super',
-        base:'../../model/base',
-        ccitynew:'../controller/c-citynew'
+        $:'../../Javascript/libs/zepto.min',
+        touch:'../../Javascript/libs/zepto.event.touch',
+        async:'../../Javascript/libs/async',
+        fastclick:'../../Javascript/libs/fastclick.min',
+        wx:'../../Javascript/libs/jweixin-1.0.0',
+        wxconfig:'../../Javascript/app/model/wxconfig',
+        super:'../../Javascript/app/model/super',
+        base:'../../Javascript/app/model/base',
+        ccitynew:'../../Javascript/app/controller/c-citynew'
     },
     shim: {
         fastclick: {

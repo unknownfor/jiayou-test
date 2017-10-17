@@ -1,152 +1,111 @@
-body {
-  background:#efecec;
-  position:relative;
-  -webkit-tap-highlight-color:rgba(0,0,0,0);
-  max-width: 600px;
-  margin: 0 auto;
+.city-wrapper {
+  background: #F2F2F2;
+  position: relative;
+  /*城市弹层*/
+  .container {
+    .size(100%,100%);
+    position: relative;
+    background-color: #F2F2F2;
+    z-index: 9999;
+    @h:45px;
+    .letter {
+      width: 5%;
+      overflow: hidden;
+      line-height: 26px;
+      font-size: 16px;
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      text-align: center;
+      > ul {
+        list-style-type: none;
+        > li {
+          > a {
+            text-decoration: none;
+            color: #eb4452;
+          }
+        }
+      }
+    }
+
+    .city {
+      overflow: hidden;
+      .city-list {
+        background-color: #ffffff;
+        > a {
+          display: inline-block;
+          width: 100%;
+        }
+        &:last-child {
+          > P {
+            border-bottom: none;
+          }
+        }
+      }
+      .brand {
+        margin: 0;
+        padding: 8px 15px;
+        flex-basis: 30px;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        font-size: 13px;
+        color: #333333;
+        > span {
+          margin-left: 5px;
+        }
+      }
+    }
+    .city-list p {
+      color: #afafaf;
+      height: @h;
+      line-height: @h;
+      padding:  0 15px;
+      border-bottom: 1px solid #dfdfdf;
+      cursor: pointer;
+    }
+
+    .UISelect {
+      margin-top: 5px
+    }
+    .icon-car {
+      @w:35px;
+      .size(@w,@w);
+    }
+  }
+  .city-letter {
+    padding: 15px;
+    color: #8a8a8a;
+    font-size: 14px;
+    display: inline-block;
+    width: 100%;
+  }
+  .hot-city {
+    width: 300px;
+    color: #333333;
+    display: flex;
+    flex-wrap: wrap;
+    .city-name {
+      @h:30px;
+      height: @h;
+      flex: 0 0 80px;
+      border: 1px solid #dfdfdf;
+      position: relative;
+      background-color: #ffffff;
+      text-align: center;
+      line-height: @h;
+      margin: 0 5px 10px 5px;
+    }
+  }
 }
-body,div,dl,dt,dd,ul,li,form,input,button,h1,h2,h3,h4,h5,h6,p {
-  margin: 0 auto;
-  padding:0;
-  font-family:"微软雅黑";
+@media screen and (max-width: 320px) {
+  .carbrand-wrapper {
+    .container {
+      .letter {
+        line-height: 21px;
+      }
+    }
+  }
 }
-html {
-  overflow-x:hidden;
-  -webkit-text-size-adjust:none;
-}
-ul,li,dl,dt,dd {
-  display:block;
-  list-style:none;
-}
-img {
-  border:0;
-  max-width:100%;
-  height: auto;
-}
-.clear {
-  background:none;
-  border:0;
-  clear:both;
-  display:block;
-  float:none;
-  font-size:0;
-  overflow:hidden;
-  visibility:hidden;
-  width:0;
-  height:0;
-}
-a {
-  text-decoration:none;
-  outline:none;
-}
-.fl {
-  float:left;
-}
-.fr {
-  float:right;
-}
-.none {
-  display:none;
-}
-@charset "utf-8";
-.loan_jm1 {
-  width:94%;
-  margin:0 auto;
-}
-.loan_jm_spa1 {
-  width:39%;
-  height:40px;
-  line-height:40px;
-  font-size:1em;
-  color:#666;
-  display:block;
-  float:left;
-}
-.loan_jm_l1 {
-  margin-top:10px;
-  margin-bottom:15px;
-  height:40px;
-}
-.wbk_srn {
-  width:57%;
-  height:40px;
-  border:1px solid #ccc;
-  background:#FFF;
-  float:left;
-  padding-left:3%;
-  line-height:40px;
-  color:#ADADAD;
-  font-size:1.1em;
-  background-size:45%;
-  background-position:center;
-  background:#fff;
-}
-.wbk_srn b {
-  width:30px;
-  height:40px;
-  border:1px solid #ccc;
-  background:#FFF;
-  float:left;
-  padding-left:3%;
-  line-height:40px;
-  color:#ADADAD;
-  font-size:1.1em;
-  background-size:45%;
-  background-position:center;
-  background:url(../img/xl.png) right 5px no-repeat;
-}
-/*城市弹层*/
-.container {
-  width:100%;
-  position:absolute;
-  top:56px;
-  left:0;
-  background-color:#ffffff;
-  z-index:9999;
-  display:none;
-}
-.letter {
-  width:5%;
-  overflow:hidden;
-  line-height:32px;
-  font-size:16px;
-  position:fixed;
-  top:20px;
-  right:10px;
-  text-align:center;
-}
-.letter ul {
-  list-style-type:none;
-}
-.letter ul li a {
-  text-decoration:none;
-}
-.city {
-  width:90%;
-  overflow:hidden;
-  padding:20px;
-}
-.city-list {
-  width:100%;
-  overflow:hidden;
-}
-.city-list .city-letter {
-  color:#6e6e6e;
-  font-size:16px;
-  display:inline-block;
-  padding-top:15px;
-  padding-bottom:5px;
-  border-bottom:1px solid #e8ecf1;
-  width:100%;
-}
-.city-list p {
-  color:#afafaf;
-  width:95%;
-  height:50px;
-  line-height:50px;
-  border-bottom:1px solid #e8ecf1;
-  cursor:pointer;
-}
-.UISelect {
-  margin-top:5px
-}
+
