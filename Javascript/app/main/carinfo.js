@@ -23,8 +23,7 @@ requirejs.config({
         wxconfig:'../model/wxconfig',
         super:'../model/super',
         base:'../model/base',
-        city:'../model/LArea.min',
-        cityD:'../model/LAreaData1',
+        // lCalendar: '../../libs/lCalendar',
         ccarinfo:'../controller/c-carinfo'
     },
     shim: {
