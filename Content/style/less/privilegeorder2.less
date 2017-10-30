@@ -1,0 +1,214 @@
+.pick-item {
+  background-color: #f2f2f2;
+  width: 100%;
+  height: 400px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 10px;
+  box-sizing: border-box;
+  text-decoration: none;
+  line-height: 45px;
+  border-bottom: 1px solid #bfbfbf;
+  .pick-btn {
+    .size(45px,45px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .pick-chose {
+      @w: 16px;
+      flex: 0 0 @w;
+      display:block;
+      .size(@w,@w);
+      border-radius: @w;
+      border:1px solid #ccc;
+      background:#fff;
+    }
+    &.checked{
+      .pick-chose {
+        position: relative;
+        border:1px solid #eb4452;
+        > span {
+          position: relative;
+          top: -15px;
+          left: 2px;
+          @ww:12px;
+          display: inline-block;
+          .size(@ww,@ww);
+          border-radius: @ww;
+          background:#eb4452;
+        }
+      }
+      }
+  }
+
+  .txt {
+    color: #333333;
+    font-size: 13px;
+    margin-left: 8px;
+  }
+}
+.vip-card-ad {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0,0,0,0.35);
+  width: 100%;
+  height: 47px;
+  line-height: 47px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 10px;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-size: 12px;
+  color: #ffffff;
+  img {
+    height: 22px;
+    margin-right: 5px;
+  }
+  .vip-middle-box {
+    flex:1;
+    .red {
+      font-size: 13px;
+      color:#FCD23D;
+    }
+  }
+  .icon-right {
+    font-size: 24px;
+  }
+}
+.station-main {
+  //display: none;
+  .station-item-first {
+    &:last-child{
+      margin-bottom: 0;
+    }
+    &:active{
+      background-color: #f3f1f1;
+    }
+    >div{
+      //height: 100%;
+      //.f(column);
+      //justify-content: center;
+    }
+    .station-detail {
+      .f;
+      .size(100%,auto);
+      padding-right:15px;
+      align-items: center;
+      box-sizing: border-box;
+      background-color: #fff;
+      .left-box{
+        flex: 1;
+        font-size: 13px;
+        padding: 12px 15px;
+        .name-box {
+          .f;
+          align-content: center;
+          .station-name {
+            color: @dark-color;
+            margin-bottom: 5px;
+            .txt-ellipsis-p(1);
+            font-size: 14px;
+          }
+
+        }
+        .station-address{
+          color: @gray-color;
+          .txt-ellipsis-p(2);
+        }
+        .discount-str{
+          margin-top: 4px;
+          font-size: 12px;
+          color: @dark-color;
+        }
+      }
+      .right-box{
+        flex-basis: 60px;
+        font-size: 12px;
+        margin-left: 8px;
+        justify-content: flex-end;
+        a{
+          text-decoration: none;
+        }
+        .distance{
+          color: @gray-color;
+          margin-bottom: 5px;
+          text-align: center;
+        }
+        .navigation{
+          color: @red-main-color;
+          text-align: center;
+        }
+      }
+    }
+    .station-section {
+      border-top: 1px solid #e3e3e3;
+      font-size: 12px;
+      color: #8a8a8a;
+      @h:30px;
+      height: @h;
+      line-height: @h;
+      text-align: center;
+      display: flex;
+      padding: 8px 15px;
+      .section-item {
+        flex:1;
+        img {
+          height: 25px;
+
+        }
+        .icon-navigation {
+          font-size: 24px;
+          color: #eb4452;
+          vertical-align: -4px;
+        }
+        &.left {
+          border-right: 1px solid #e3e3e3;
+          img {
+            vertical-align: -6px;
+          }
+        }
+      }
+    }
+
+  }
+}
+select::-ms-expand {
+  display: none;
+}
+.place-wrapper {
+  padding: 0 7.5px;
+  display: flex;
+  margin-bottom: 13px;
+  .place-select {
+    flex: 1;
+    margin-right: 15px;
+    justify-content: space-between;
+    position: relative;
+    &:last-child {
+      margin-right: 0;
+    }
+    label {
+      display: flex;
+    }
+    .select {
+      @w:0.5;
+      width: 100%;
+      height: 28px;
+      border-radius: 3px;
+      border: 1px solid #dfdfdf;
+      appearance:none;
+      -moz-appearance:none;
+      -webkit-appearance:none;
+      /*在选择框的最右侧中间显示小箭头图片*/
+      background: url('../../images/home/arrow-down.png') no-repeat scroll right center transparent;
+      /*为下拉小箭头留出一点位置，避免被文字覆盖*/
+      padding-right: 14px;
+      background-size: 32px*@w 15px*@w;
+    }
+  }
+}
