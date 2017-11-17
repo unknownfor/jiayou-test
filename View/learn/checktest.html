@@ -1,0 +1,254 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>demo</title>
+    <link href="css/suggest.css" rel="stylesheet" type="text/css">
+    <link href="css/pagination.css" rel="stylesheet" type="text/css">
+    <style type="text/css">
+        em{font-style:normal;color: red;font-weight: bold}
+    </style>
+
+
+    <script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" src="js/suggest.js"></script>
+    <script type="text/javascript" src="js/jquery.pagination.js"></script>
+    <script type="text/javascript">
+
+        $(function(){
+
+            $('.isearchSug').bind('keypress',function(event){
+                if(event.keyCode == "13"){
+                    doSearch();
+                }
+            });
+
+        });
+
+
+        function page(page_id){
+            var total = pageselectCallback(page_id);
+            if(total==0){
+                $("#Pagination").html("");
+            }
+            else{
+                //调用分页函数，将分页插件绑定到id为Pagination的div上
+                $("#Pagination").pagination(total, { //recordCount在后台定义的一个公有变量，通过从数据库查询记录进行赋值，返回记录的总数
+                    callback: pageselectCallback,  //点击分页时，调用的回调函数
+                    prev_text: '<上一页',  //显示上一页按钮的文本
+                    next_text: '下一页>',  //显示下一页按钮的文本
+                    items_per_page:10,  //每页显示的项数
+                    num_display_entries:6,  //分页插件中间显示的按钮数目
+                    current_page:page_id,  //当前页索引
+                    num_edge_entries:2 //分页插件左右两边显示的按钮数目
+
+                });
+            }
+        }
+
+        //点击分页时调用的函数，page_id为当前页的索引
+        function pageselectCallback(pageIndex)
+        {
+            var temp="";
+            var total=0;
+            var q = $("#isearch").val();
+            var t = $("#type").val();
+            alert(t);
+            var p = pageIndex+1;
+            //  var p = pageIndex;
+            $.ajax({
+                async:false,
+                dataType: "json",
+                type: "post",
+                url: "http://10.18.224.102/edusearch/search/search",
+                data: {
+                    "q":q,
+                    "t":t,
+                    "n":10,
+                    "p":p
+                },
+                //发送请求前，显示加载动画
+                beforeSend:function(){$("#divload").show();$("#datas #Pagination").hide()},
+                //请求完毕后，隐藏加载动画
+                complete:function(){$("#divload").hide();$("#datas #Pagination").show()},
+                success: function(data,textStatus,jqXHR) {
+                    //  alert(data);
+                    if(data!=null&&data!=""){
+                        var obj = eval(data);
+                        if(obj.retCode==0){
+                            var items = obj.items;
+                            //    for(var i=0;i<items.length;i++){
+                            //       if(items[i]!=null){
+                            //          alert(items[i].name);
+                            //       }
+                            //    }
+                            var json=items;//json数据
+                            total=obj.total;//记录总数
+                            if(json==null||json==undefined){
+                                $("#datas").html("");
+                            }
+                            else{
+                                $.each(json,function(index,item){
+                                    //           temp+="<div id='datas'  classdivclass=\"d_out\" onmouseover=\"this.className='d_over'\" "+
+                                    //                "onmouseout=\"this.className='d_out'\" style='padding: 10px 15px 12px 15px;'>"+
+                                    //                "<strong> <a style='font-size: 20px;font-famliy: 宋体;color:#333;' href='"+item.user_id+"' target='_blank'>"+
+                                    //                     item.user_name+"</a></strong>"+
+                                    //              "<div style='font-size: 12px; font-famliy: 宋体; '>"+"part_id:"+item.part_id+" </div>"+
+                                    //              "<div style='font-size: 14px; font-famliy: 宋体; text-indent: 2em; margin-top: 5px;'>"+
+                                    //                 "user_id:"+item.user_id+" </div></div><hr />";
+                                    temp+=eval('(' + item + ')')+"<hr />";
+                                });
+                                $("#datas").html(temp); //将创建的新行附加在DIV中
+                            }
+                        }
+                    }
+                },
+                error : function() {
+                    alert("搜索失败！");
+                }
+            });
+
+            return total;
+        }
+
+        function pageClick(pageIndex, total, spanInterval){
+            var total = pageselectCallback(pageIndex);
+            if(total!=0){
+                var intPageIndex = parseInt(pageIndex);
+                //创建分页
+                //将总记录数结果 得到 总页码数
+                var pageS = total;
+                if (pageS % 10 == 0)
+                    pageS = pageS / 10;
+                else
+                    pageS = parseInt(total / 10) + 1;
+                var $pager = $("#Pagination");
+                //清楚分页div中的内容
+                $("#Pagination span").remove();
+                $("#Pagination a").remove();
+                //添加第一页
+                if (intPageIndex == 1)
+                    $pager.append("<span class='disabled'>第一页</span>");
+                else {
+                    var first = $("<a href='javascript:void(0)' first='" + 1 + "'>第一页</a>").click(function () {
+                        pageClick($(this).attr('first'), total, spanInterval);
+                        return false;
+                    });
+                    $pager.append(first);
+                }
+                //添加上一页
+                if (intPageIndex == 1)
+                    $pager.append("<span class='disabled'>上一页</span>");
+                else {
+                    var pre = $("<a href='javascript:void(0)' pre='" + (intPageIndex - 1) + "'>上一页</a>").click(function () {
+                        pageClick($(this).attr('pre'), total, spanInterval);
+                        return false;
+                    });
+                    $pager.append(pre);
+                }
+                //设置分页的格式  这里可以根据需求完成自己想要的结果
+                var interval = parseInt(spanInterval); //设置间隔
+                var start = Math.max(1, intPageIndex - interval); //设置起始页
+                var end = Math.min(intPageIndex + interval, pageS)//设置末页
+                if (intPageIndex < interval + 1) {
+                    end = (2 * interval + 1) > pageS ? pageS : (2 * interval + 1);
+                }
+                if ((intPageIndex + interval) > pageS) {
+                    start = (pageS - 2 * interval) < 1 ? 1 : (pageS - 2 * interval);
+                }
+                //生成页码
+                for (var j = start; j < end + 1; j++) {
+                    if (j == intPageIndex) {
+                        var spanSelectd = $("<span class='current'>" + j + "</span>");
+                        $pager.append(spanSelectd);
+                    } //if
+                    else {
+                        var a = $("<a href='javascript:void(0)'>" + j + "</a>").click(function () {
+                            pageClick($(this).text(), total, spanInterval);
+                            return false;
+                        });
+                        $pager.append(a);
+                    } //else
+                } //for
+                //上一页
+                if (intPageIndex == total) {
+                    $pager.append("<span class='disabled'>下一页</span>");
+                }
+                else {
+                    var next = $("<a href='javascript:void(0)' next='" + (intPageIndex + 1) + "'>下一页</a>").click(function () {
+                        pageClick($(this).attr("next"), total, spanInterval);
+                        return false;
+                    });
+                    $pager.append(next);
+                }
+                //最后一页
+                if (intPageIndex == pageS) {
+                    $pager.append("<span class='disabled'>最后一页</span>");
+                }
+                else {
+                    var last = $("<a href='javascript:void(0)' last='" + pageS + "'>最后一页</a>").click(function () {
+                        pageClick($(this).attr("last"), total, spanInterval);
+                        return false;
+                    });
+                    $pager.append(last);
+                }
+            }
+
+        }
+
+        function doSearch(){
+            //  var total = pageselectCallback(1);
+            //  pageClick(1, total, 3);
+            page(0);
+        }
+
+
+    </script>
+
+</head>
+
+<body>
+
+<div id="content">
+
+    <form autocomplete="off" action="result.jsp" method="post">
+        <p>
+            <label>search:</label>
+            <input type="text" id="isearch" name="isearch" class="isearchSug"/>
+            <select id="type" name="type">
+                <option value="00">全部</option>
+                <option value="01">用户</option>
+                <option value="02">圈子</option>
+                <option value="03">消息动态</option>
+                <option value="04">门户</option>
+                <option value="05">--资源--</option>
+                <option value="0521">&nbsp;-教案</option>
+                <option value="0522">&nbsp;-学案</option>
+                <option value="0523">&nbsp;-课件</option>
+                <option value="0525">&nbsp;-同步试卷</option>
+                <option value="0526">&nbsp;-录课通</option>
+                <option value="0527">&nbsp;-微视频</option>
+                <option value="06">作业</option>
+                <option value="07">问答</option>
+                <option value="08">课程</option>
+                <option value="09">问答</option>
+            </select>
+            <input type="submit" value="用户搜索"/>
+        </p>
+    </form>
+
+    <div class="page">
+        <div style="margin: 10px 0;"></div>
+        <div id="datas">
+        </div>
+        <div id="divload" style="text-align: center">
+        </div>
+        <div id="Pagination" class="digg"></div>
+    </div>
+
+</div>
+
+</body>
+</html>
+
