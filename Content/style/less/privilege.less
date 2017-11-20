@@ -1,0 +1,72 @@
+.privilege-wrapper {
+  margin: 0 auto;
+  max-width: 700px;
+  position: relative;
+  .head-box {
+    position: relative;
+    background-image: linear-gradient(to bottom, #f4d984, #f4dfa4);
+    padding: 25px 15px 0 15px;
+    > img {
+      max-width: 100%;
+    }
+  }
+  .middle-box {
+    position: absolute;
+    left:0;
+    right:0;
+    top: 220px;
+    padding: 15px;
+    background-color: #ffffff;
+    .middle-item {
+      display: flex;
+      .item-box {
+        display: flex;
+        flex:4;
+        justify-content:center;
+        margin: 15px;
+        .icon-box {
+          display: inline-block;
+          background: url("../../images/privilege/sprite.png");
+          background-size: 218px*0.8 115px*0.8;
+          &.gas {
+            .size(35px,38px);
+            background-position: -8px -54px;
+          }
+          &.coupon {
+            .size(45px,40px);
+            background-position: 0 0;
+          }
+          &.parking {
+            .size(44px,35px);
+            background-position: -95px -54px;
+          }
+          &.store {
+            .size(32px,39px);
+            background-position: -101px 0;
+          }
+          &.check {
+            .size(38px,38px);
+            background-position: -136px 0;
+          }
+          &.agent {
+            .size(38px,38px);
+            background-position: -141px -51px;
+          }
+          &.service {
+            .size(33px,39px);
+            background-position: -53px -54px;
+          }
+          &.pickup {
+            .size(40px,40px);
+            background-position: -54px 0;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 320px) {
+  .privilege-wrapper {
+
+  }
+}

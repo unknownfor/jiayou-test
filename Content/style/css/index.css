@@ -5939,94 +5939,94 @@ body {
   margin-bottom: 35px;
 }
 .privilege-wrapper {
+  margin: 0 auto;
   max-width: 700px;
-  margin: 0 auto;
   position: relative;
-  background-color: #F2F2F2;
 }
-.privilege-wrapper .hide {
-  opacity: 0;
-  display: none;
-}
-.privilege-wrapper .info-item {
-  text-align: center;
-}
-.privilege-wrapper .info-item .info-head {
+.privilege-wrapper .head-box {
   position: relative;
-  height: 200px;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#151515), to(#474d50));
-  background-image: -webkit-linear-gradient(top, #151515, #474d50);
-  background-image: linear-gradient(to bottom, #151515, #474d50);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f4d984), to(#f4dfa4));
+  background-image: -webkit-linear-gradient(top, #f4d984, #f4dfa4);
+  background-image: linear-gradient(to bottom, #f4d984, #f4dfa4);
+  padding: 25px 15px 0 15px;
 }
-.privilege-wrapper .info-item .info-bg {
-  border: none;
-  width: 88%;
+.privilege-wrapper .head-box > img {
+  max-width: 100%;
+}
+.privilege-wrapper .middle-box {
   position: absolute;
-  top: 100px;
   left: 0;
   right: 0;
-  margin: 0 auto;
-  -webkit-box-shadow: 0 2px 4px 0 #e2e2e2;
-  box-shadow: 0 2px 4px 0 #e2e2e2;
-  border-radius: 6px;
-}
-.privilege-wrapper .info-item .info-container {
+  top: 220px;
+  padding: 15px;
   background-color: #ffffff;
-  position: relative;
-  top: 115px;
-  padding-top: 15px;
-  text-align: center;
 }
-.privilege-wrapper .info-item .info-container .info-title {
-  margin-bottom: 15px;
+.privilege-wrapper .middle-box .middle-item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
-.privilege-wrapper .info-item .info-container .info-title .line {
+.privilege-wrapper .middle-box .middle-item .item-box {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 4;
+  -webkit-flex: 4;
+  -ms-flex: 4;
+  flex: 4;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 15px;
+}
+.privilege-wrapper .middle-box .middle-item .item-box .icon-box {
   display: inline-block;
+  background: url("../../images/privilege/sprite.png");
+  -webkit-background-size: 174.4px 92px;
+  background-size: 174.4px 92px;
+}
+.privilege-wrapper .middle-box .middle-item .item-box .icon-box.gas {
   width: 35px;
-  height: 1px;
-  border-top: 1px solid #333333;
+  height: 38px;
+  background-position: -8px -54px;
 }
-.privilege-wrapper .info-item .info-container .info-title .txt {
-  margin: 0 8px;
+.privilege-wrapper .middle-box .middle-item .item-box .icon-box.coupon {
+  width: 45px;
+  height: 40px;
+  background-position: 0 0;
 }
-.privilege-wrapper .info-item .info-container .item-box > li {
-  margin: 0 15px 15px 15px;
+.privilege-wrapper .middle-box .middle-item .item-box .icon-box.parking {
+  width: 44px;
+  height: 35px;
+  background-position: -95px -54px;
 }
-.privilege-wrapper .info-item .info-container .item-box > li > img {
-  width: 100%;
+.privilege-wrapper .middle-box .middle-item .item-box .icon-box.store {
+  width: 32px;
+  height: 39px;
+  background-position: -101px 0;
 }
-.privilege-wrapper .info-item .info-container .join-btn {
-  display: inline-block;
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 45px;
-  line-height: 45px;
-  color: white;
-  background-color: rgba(255, 255, 255, 0.8);
-  text-align: center;
-  z-index: 500;
-  width: 100%;
+.privilege-wrapper .middle-box .middle-item .item-box .icon-box.check {
+  width: 38px;
+  height: 38px;
+  background-position: -136px 0;
 }
-.privilege-wrapper .info-item .info-container .join-btn > a {
-  width: 100%;
-  height: 45px;
-  display: inline-block;
+.privilege-wrapper .middle-box .middle-item .item-box .icon-box.agent {
+  width: 38px;
+  height: 38px;
+  background-position: -141px -51px;
 }
-.privilege-wrapper .info-item .info-container .join-btn > a > div {
-  display: inline-block;
-  color: #fff;
-  line-height: 45px;
-  background-color: #eb4452;
-  width: 92%;
-  height: 45px;
-  border-radius: 5px;
+.privilege-wrapper .middle-box .middle-item .item-box .icon-box.service {
+  width: 33px;
+  height: 39px;
+  background-position: -53px -54px;
 }
-@media screen and (max-width: 320px) {
-  .privilege-wrapper .info-item .info-container {
-    top: 70px;
-  }
+.privilege-wrapper .middle-box .middle-item .item-box .icon-box.pickup {
+  width: 40px;
+  height: 40px;
+  background-position: -54px 0;
 }
 .myPrivilege-wrapper {
   max-width: 700px;
