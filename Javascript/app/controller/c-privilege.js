@@ -88,37 +88,30 @@ define(['base','async','template','baidumap'],function (BaseClass,Async,Template
                 linkUrlVip:url+ '/myhome'
             },
             {
-                // imgUrl:'http://jiayouzan.oss-cn-hangzhou.aliyuncs.com/e28591435a8dc47417fb5082806afabc.png',
                 linkUrl:'http://mp.weixin.qq.com/s/jvX4Tkzakg_ZhC-cDFS47w',
                 linkUrlVip:url+ '/myhome'
             },
             {
-                // imgUrl:'http://jiayouzan.oss-cn-hangzhou.aliyuncs.com/ecc54f26d5716111e602fcfd355c1ca2.png',
                 linkUrl:url +'mycouponlist',
                 linkUrlVip:url + '/mycoupon'
             },
             {
-                // imgUrl:'http://jiayouzan.oss-cn-hangzhou.aliyuncs.com/e875ff28d1928e42961ded81c6d2c2e5.png',
                 linkUrl:url +'/servicelist',
                 linkUrlVip:url +'/servicelist2'
             },
             {
-                // imgUrl:'http://jiayouzan.oss-cn-hangzhou.aliyuncs.com/0edeee70bad8bae0d1cf84e704dc37e5.png',
                 linkUrl:'http://mp.weixin.qq.com/s/qd7sIRBKSXZdHGgwDPZroQ',
                 linkUrlVip:url +'/service'
             },
             {
-                // imgUrl:'http://jiayouzan.oss-cn-hangzhou.aliyuncs.com/e75d2cb46be1f062070dee7a52fa369c.png',
                 linkUrl:'http://mp.weixin.qq.com/s/qd7sIRBKSXZdHGgwDPZroQ',
                 linkUrlVip:'http://mp.weixin.qq.com/s/qd7sIRBKSXZdHGgwDPZroQ'
             },
             {
-                // imgUrl:'http://jiayouzan.oss-cn-hangzhou.aliyuncs.com/12c978881652550409470bd40a7032ce.png',
                 linkUrl:'http://mp.weixin.qq.com/s/c1mSwF8nMcOdcsh8wgDIxQ',
                 linkUrlVip:url + '/agentservice'
             },
             {
-                // imgUrl:'http://jiayouzan.oss-cn-hangzhou.aliyuncs.com/40b4d3d070f95f328c10f01c72bb5038.png',
                 linkUrl:'http://mp.weixin.qq.com/s/9kTK8qxkFHOWIFC_GScYfw',
                 linkUrlVip:'http://mp.weixin.qq.com/s/9kTK8qxkFHOWIFC_GScYfw'
             }

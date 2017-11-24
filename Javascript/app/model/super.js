@@ -260,7 +260,7 @@ define(['$','wx','fastclick'],function(){
         },
 
         CLASS_NAME: 'Super'
-    }
+    };
 
 
     return Super;

@@ -7,8 +7,56 @@
     position: relative;
     background-image: linear-gradient(to bottom, #f4d984, #f4dfa4);
     padding: 25px 15px 0 15px;
-    > img {
+    .back-wrapper {
+      position: relative;
       max-width: 100%;
+    }
+    .head-info {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      margin: 45px;
+      color: #ffffff;
+      display: flex;
+      @w: 45px;
+      .user-logo {
+        flex: 0 0 @w;
+        .size(@w,@w);
+        border-radius: @w;
+      }
+      .member-info {
+        margin-left: 8px;
+        .user-info {
+          display: flex;
+          .user-name {
+            line-height: @w;
+            font-size: 15px;
+            .txt-ellipsis-p(1);
+            margin-right: 8px;
+          }
+          .crown {
+            @cw:68px*0.5;
+            @ch:56px*0.5;
+            flex:0 0 @cw;
+            .size(@cw,@ch);
+            background: url("../../images/privilege/crown.png");
+            background-size:  @cw,@ch;
+            margin-top: 7px;
+          }
+        }
+        .member-txt {
+          > div {
+            margin: 5px 0;
+          }
+          .member-validity {
+
+          }
+          .member-tips {
+
+          }
+        }
+      }
     }
   }
   .middle-box {
